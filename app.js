@@ -1,180 +1,461 @@
-function createParagraphs(container, paragraphs) {
-  paragraphs.forEach((paragraph) => {
-    const p = document.createElement("p");
-    p.textContent = paragraph;
-    container.appendChild(p);
-  });
+function paragraphBlock(paragraphs) {
+  return paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("");
 }
 
-function createList(container, items) {
-  items.forEach((item) => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    container.appendChild(li);
-  });
+function listBlock(items) {
+  return items.map((item) => `<li>${item}</li>`).join("");
 }
 
-function renderLinks(containerId, links) {
-  const container = document.getElementById(containerId);
-  links.forEach((link) => {
-    const a = document.createElement("a");
-    a.href = link.href;
-    a.textContent = link.label;
-    container.appendChild(a);
-  });
-}
+function renderHeader(currentPage) {
+  const { site } = siteData;
+  const utilityLinks = site.utilityLinks
+    .map((link) => `<a href="${link.href}">${link.label}</a>`)
+    .join("");
+  const navLinks = site.nav
+    .map((item) => {
+      const active = item.page === currentPage ? ' aria-current="page"' : "";
+      return `<a href="${item.href}"${active}>${item.label}</a>`;
+    })
+    .join("");
 
-function renderSite() {
-  const data = siteData;
-
-  renderLinks("utility-links", data.utilityLinks);
-  renderLinks("footer-nav", data.nav);
-  renderLinks("footer-utility", data.utilityLinks);
-
-  const nav = document.getElementById("site-nav");
-  data.nav.forEach((item) => {
-    const link = document.createElement("a");
-    link.href = item.href;
-    link.textContent = item.label;
-    nav.appendChild(link);
-  });
-
-  document.getElementById("hero-kicker").textContent = data.metadata.kicker;
-  document.getElementById("hero-title").textContent = data.metadata.title;
-  document.getElementById("hero-summary").textContent = data.metadata.summary;
-  document.getElementById("hero-date").textContent = data.metadata.date;
-  document.getElementById("hero-location").textContent = data.metadata.location;
-  document.getElementById("theme-text").textContent = data.metadata.theme;
-  document.getElementById("focus-text").textContent = data.metadata.focus;
-
-  const heroPrimary = document.getElementById("hero-primary");
-  heroPrimary.textContent = data.metadata.primaryButton.label;
-  heroPrimary.href = data.metadata.primaryButton.href;
-
-  const heroSecondary = document.getElementById("hero-secondary");
-  heroSecondary.textContent = data.metadata.secondaryButton.label;
-  heroSecondary.href = data.metadata.secondaryButton.href;
-
-  const heroTertiary = document.getElementById("hero-tertiary");
-  heroTertiary.textContent = data.metadata.tertiaryLink.label;
-  heroTertiary.href = data.metadata.tertiaryLink.href;
-
-  createParagraphs(document.getElementById("hero-intro"), data.heroIntro);
-  document.getElementById("overview-note").textContent = data.overview.note;
-  createParagraphs(document.getElementById("overview-copy"), data.overview.paragraphs);
-  createParagraphs(document.getElementById("artist-copy"), data.artist.paragraphs);
-  createParagraphs(
-    document.getElementById("featured-program-copy"),
-    data.artist.featuredProgram
-  );
-  createParagraphs(document.getElementById("artist-bio-copy"), data.artist.bio);
-  createList(document.getElementById("artist-works"), data.artist.selectedWorks);
-  createParagraphs(document.getElementById("artist-signing-copy"), data.artist.signing);
-
-  const highlightsGrid = document.getElementById("highlights-grid");
-  data.highlights.forEach((highlight) => {
-    const card = document.createElement("article");
-    card.className = "highlight-card";
-    card.innerHTML = `<h3>${highlight.title}</h3><p>${highlight.body}</p>`;
-    highlightsGrid.appendChild(card);
-  });
-
-  createParagraphs(document.getElementById("collaboration-copy"), data.collaboration.paragraphs);
-  createList(document.getElementById("collaboration-list"), data.collaboration.areas);
-
-  createParagraphs(document.getElementById("student-intro"), data.student.intro);
-  createParagraphs(document.getElementById("prompt-copy"), data.student.prompt);
-
-  const formsGrid = document.getElementById("forms-grid");
-  data.student.forms.forEach((form) => {
-    const card = document.createElement("article");
-    card.className = "form-card";
-    card.innerHTML = `<h3>${form.title}</h3><p>${form.body}</p>`;
-    formsGrid.appendChild(card);
-  });
-
-  createList(document.getElementById("student-features"), data.student.features);
-  createParagraphs(document.getElementById("eligibility-copy"), data.student.eligibility);
-  createList(document.getElementById("submission-items"), data.student.submissionItems);
-  createParagraphs(document.getElementById("selection-copy"), data.student.selection);
-  createParagraphs(document.getElementById("faculty-copy"), data.student.faculty);
-
-  const scheduleList = document.getElementById("schedule-list");
-  data.schedule.forEach((item) => {
-    const article = document.createElement("article");
-    article.className = "schedule-card";
-    const paragraphs = item.description.map((text) => `<p>${text}</p>`).join("");
-    const bullets = item.bullets
-      ? `<ul>${item.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}</ul>`
-      : "";
-    const meta = item.meta
-      .map((entry) => `<li>${entry}</li>`)
-      .join("");
-
-    article.innerHTML = `
-      <div class="schedule-time">${item.time}</div>
-      <div class="schedule-body">
-        <h3>${item.title}</h3>
-        ${item.subheading ? `<p class="detail-subhead">${item.subheading}</p>` : ""}
-        <div class="prose">${paragraphs}</div>
-        ${bullets}
-        <ul class="schedule-meta">${meta}</ul>
+  document.getElementById("site-header").innerHTML = `
+    <div class="topbar">
+      <div class="topbar-inner">
+        <span class="topbar-label">${site.date}</span>
+        <div class="topbar-links">${utilityLinks}</div>
       </div>
-    `;
-    scheduleList.appendChild(article);
-  });
+    </div>
+    <div class="header-bar">
+      <a class="brand" href="index.html" aria-label="${site.title} home">
+        <img class="brand-logo" src="${site.logoImage}" alt="${site.logoAlt}" />
+        <span class="brand-copy">
+          <strong>${site.title}</strong>
+          <span>${site.subtitle}</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        ${navLinks}
+      </nav>
+    </div>
+  `;
+}
 
-  createParagraphs(
-    document.getElementById("exhibition-overview"),
-    data.exhibition.overview
-  );
-  createList(
-    document.getElementById("exhibition-components"),
-    data.exhibition.components
-  );
-  createParagraphs(
-    document.getElementById("cla-installation"),
-    data.exhibition.claInstallation
-  );
-  createParagraphs(
-    document.getElementById("student-work-copy"),
-    data.exhibition.studentWorkCopy
-  );
-  createList(
-    document.getElementById("student-work-list"),
-    data.exhibition.studentWorkList
-  );
+function renderFooter() {
+  const { site } = siteData;
+  const navLinks = site.nav.map((item) => `<a href="${item.href}">${item.label}</a>`).join("");
+  const utilityLinks = site.utilityLinks
+    .map((item) => `<a href="${item.href}">${item.label}</a>`)
+    .join("");
 
-  const aboutSections = document.getElementById("about-sections");
-  data.aboutSections.forEach((section) => {
-    const article = document.createElement("article");
-    article.className = "detail-card";
-    article.innerHTML = `
-      <p class="eyebrow">${section.eyebrow}</p>
-      <h3>${section.title}</h3>
-      <div class="prose">${section.paragraphs.map((p) => `<p>${p}</p>`).join("")}</div>
-      ${section.bullets ? `<ul>${section.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}</ul>` : ""}
-    `;
-    aboutSections.appendChild(article);
-  });
+  document.getElementById("site-footer").innerHTML = `
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="eyebrow">${site.title}</p>
+        <h2>${site.title}</h2>
+        <p>${site.date}<br />${site.venue}<br />${site.city}</p>
+      </div>
+      <div>
+        <p class="footer-heading">Pages</p>
+        <div class="footer-links">${navLinks}</div>
+      </div>
+      <div>
+        <p class="footer-heading">Links</p>
+        <div class="footer-links">${utilityLinks}</div>
+        <p class="footer-legal">${site.footerLegal}</p>
+      </div>
+    </div>
+  `;
+}
 
-  const eventInfoGrid = document.getElementById("event-info-grid");
-  data.eventInfo.forEach((item) => {
-    const article = document.createElement("article");
-    article.className = "detail-card";
-    article.innerHTML = `
-      <p class="eyebrow">${item.eyebrow}</p>
-      <h3>${item.title}</h3>
-      <div class="prose">${item.paragraphs.map((p) => `<p>${p}</p>`).join("")}</div>
-      ${item.button ? `<a class="button button-secondary" href="#event-information">${item.button}</a>` : ""}
-    `;
-    eventInfoGrid.appendChild(article);
-  });
+function renderPageHeader(data) {
+  return `
+    <section class="page-intro section-frame">
+      ${data.eyebrow ? `<p class="eyebrow">${data.eyebrow}</p>` : ""}
+      <h1>${data.title}</h1>
+      <p class="lede">${data.intro}</p>
+      ${data.note ? `<p class="microcopy">${data.note}</p>` : ""}
+    </section>
+  `;
+}
+
+function renderHome() {
+  const { site, shared, pages } = siteData;
+  const page = pages.home;
+  return `
+    <section class="hero">
+      <figure class="hero-banner section-frame">
+        <img src="${site.heroImage}" alt="${site.heroAlt}" />
+      </figure>
+      <section class="hero-copy section-frame">
+        <p class="eyebrow">${page.hero.eyebrow}</p>
+        <h1>${page.hero.title}</h1>
+        <p class="lede">${page.hero.summary}</p>
+        <div class="hero-meta">
+          <div><span>Date</span><strong>${site.date}</strong></div>
+          <div><span>Location</span><strong>${site.venue}</strong></div>
+        </div>
+        <p>${page.hero.shortIntro}</p>
+        <div class="button-row">
+          <a class="button button-primary" href="${page.hero.primaryButton.href}">${page.hero.primaryButton.label}</a>
+          <a class="button button-secondary" href="${page.hero.secondaryButton.href}">${page.hero.secondaryButton.label}</a>
+        </div>
+        <a class="text-link" href="${page.hero.tertiaryLink.href}">${page.hero.tertiaryLink.label}</a>
+        <div class="chip-row">
+          ${page.hero.chips.map((chip) => `<span class="chip">${chip}</span>`).join("")}
+        </div>
+      </section>
+    </section>
+
+    <section class="content-section editorial-split">
+      <div class="section-heading">
+        <p class="eyebrow">Event Overview</p>
+        <h2>${shared.eventOverview.title}</h2>
+      </div>
+      <div class="editorial-columns">
+        <div class="section-prose">
+          <p class="lede-small">${shared.eventOverview.intro}</p>
+          ${paragraphBlock(shared.eventOverview.paragraphs)}
+        </div>
+        <aside class="pull-quote">
+          <p>Planet Deep South returns to Jackson State University as a concentrated campus gathering rooted in scholarship, art, performance, and Black speculative futures.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content-section feature-band">
+      <div class="section-heading">
+        <p class="eyebrow">Featured Artist</p>
+        <h2>John Jennings</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-panel">
+          ${paragraphBlock(shared.artistShort)}
+          <div class="button-row">
+            <a class="button button-secondary" href="john-jennings.html">About John Jennings</a>
+            <a class="button button-primary" href="schedule.html">View the Featured Program</a>
+          </div>
+        </article>
+        <article class="spotlight-panel">
+          <p class="eyebrow">Craft Talk</p>
+          <h3>Drawing the Future South</h3>
+          <p class="detail-kicker">A Craft Talk with John Jennings</p>
+          <p>John Jennings will discuss how artists build speculative worlds through comics, character design, visual research, collage, typography, adaptation, history, and cultural memory.</p>
+          <p>The program will explore the relationship between Black visual culture and future-making, as well as the role of artists, writers, and educators in imagining worlds beyond the present.</p>
+          <div class="detail-pair">
+            <strong>${site.date}</strong>
+            <span>Time and location to be announced</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Program Highlights</p>
+        <h2>Scholarship, exhibition, performance, and collective imagination.</h2>
+      </div>
+      <div class="card-grid card-grid-three">
+        ${page.highlights
+          .map(
+            (item) => `
+              <article class="info-card">
+                <h3>${item.title}</h3>
+                <p>${item.body}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Campus Collaboration</p>
+        <h2>Across the Arts and Humanities</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="section-prose section-frame">
+          ${paragraphBlock(page.collaboration.paragraphs)}
+        </article>
+        <article class="list-panel">
+          <p class="eyebrow">Participating Areas May Include</p>
+          <ul>${listBlock(shared.collaborationAreas)}</ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section closing-banner">
+      <div>
+        <p class="eyebrow">Join Us at Planet Deep South</p>
+        <h2>Spend the day exploring art, scholarship, creative practice, and the future of the Black South at Jackson State University.</h2>
+      </div>
+      <div class="button-row">
+        <a class="button button-primary" href="schedule.html">View the Schedule</a>
+        <a class="button button-secondary" href="build-your-tiger-world.html">Student Participation</a>
+      </div>
+    </section>
+  `;
+}
+
+function renderSchedule() {
+  const page = siteData.pages.schedule;
+  return `
+    ${renderPageHeader(page.pageHeader)}
+    <section class="content-section">
+      <div class="timeline">
+        ${page.items
+          .map(
+            (item) => `
+              <article class="timeline-item">
+                <div class="timeline-time">${item.time}</div>
+                <div class="timeline-body">
+                  <h3>${item.title}</h3>
+                  ${item.subheading ? `<p class="detail-kicker">${item.subheading}</p>` : ""}
+                  ${paragraphBlock(item.description)}
+                  ${item.bullets ? `<ul>${listBlock(item.bullets)}</ul>` : ""}
+                  <ul class="meta-list">${listBlock(item.meta)}</ul>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+      <p class="microcopy">Schedule subject to change.</p>
+    </section>
+  `;
+}
+
+function renderJohnJennings() {
+  const { site, pages } = siteData;
+  const page = pages["john-jennings"];
+  return `
+    ${renderPageHeader(page.pageHeader)}
+    <section class="content-section feature-band">
+      <div class="feature-grid">
+        <article class="section-prose section-frame">
+          <p class="eyebrow">Biography</p>
+          <h2>About John Jennings</h2>
+          ${paragraphBlock(page.biography)}
+        </article>
+        <aside class="media-stack">
+          <figure class="portrait-frame section-frame">
+            <img src="${site.heroImage}" alt="${site.heroAlt}" />
+          </figure>
+          <div class="list-panel">
+            <p class="eyebrow">Selected Works</p>
+            <ul>${listBlock(page.works)}</ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="feature-grid">
+        <article class="spotlight-panel">
+          <p class="eyebrow">Featured Program</p>
+          <h2>${page.program.title}</h2>
+          <p class="detail-kicker">${page.program.subtitle}</p>
+          ${paragraphBlock(page.program.paragraphs)}
+          <div class="detail-pair">
+            <strong>${siteData.site.date}</strong>
+            <span>Time and location to be announced</span>
+          </div>
+          <a class="button button-primary" href="schedule.html">View the Full Schedule</a>
+        </article>
+        <article class="list-panel">
+          <p class="eyebrow">The Program Will Explore</p>
+          <ul>${listBlock(page.program.topics)}</ul>
+        </article>
+      </div>
+    </section>
+    <section class="content-section">
+      <article class="section-prose section-frame">
+        <p class="eyebrow">Comic Book Signing</p>
+        <h2>After the Craft Talk</h2>
+        ${paragraphBlock(page.signing)}
+        <a class="text-link" href="exhibition.html">Explore the Exhibition</a>
+      </article>
+    </section>
+  `;
+}
+
+function renderExhibition() {
+  const { site, pages } = siteData;
+  const page = pages.exhibition;
+  return `
+    ${renderPageHeader(page.pageHeader)}
+    <section class="content-section feature-band">
+      <div class="feature-grid">
+        <article class="section-prose section-frame">
+          <p class="eyebrow">Exhibition Overview</p>
+          <h2>Visualizing the Black Speculative South</h2>
+          ${paragraphBlock(page.overview)}
+        </article>
+        <figure class="portrait-frame section-frame">
+          <img src="${site.heroImage}" alt="${site.heroAlt}" />
+        </figure>
+      </div>
+    </section>
+    <section class="content-section card-grid card-grid-two">
+      <article class="list-panel">
+        <p class="eyebrow">What Visitors Will See</p>
+        <ul>${listBlock(page.components)}</ul>
+        <p class="response-prompt"><strong>Response wall prompt:</strong> What kind of world will Tigers build?</p>
+      </article>
+      <article class="section-prose section-frame">
+        <p class="eyebrow">College of Liberal Arts Installation</p>
+        <h2>Companion Installation</h2>
+        ${paragraphBlock(page.claInstallation)}
+      </article>
+    </section>
+    <section class="content-section feature-grid">
+      <article class="section-prose section-frame">
+        <p class="eyebrow">Student Responses</p>
+        <h2>Selected Work May Appear</h2>
+        <p>${page.studentWork.intro}</p>
+      </article>
+      <article class="list-panel">
+        <p class="eyebrow">Student Work May Include</p>
+        <ul>${listBlock(page.studentWork.items)}</ul>
+      </article>
+    </section>
+    <section class="content-section section-frame visit-strip">
+      <div><span>Dates</span><strong>Exhibition dates to be announced</strong></div>
+      <div><span>Location</span><strong>Gallery location to be announced</strong></div>
+      <div><span>Hours</span><strong>Viewing hours to be announced</strong></div>
+      <div><span>Admission</span><strong>Free</strong></div>
+    </section>
+  `;
+}
+
+function renderBuildYourTigerWorld() {
+  const page = siteData.pages["build-your-tiger-world"];
+  return `
+    ${renderPageHeader(page.pageHeader)}
+    <section class="content-section feature-band">
+      <div class="feature-grid">
+        <article class="section-prose section-frame">
+          <p class="eyebrow">The Prompt</p>
+          <h2>What Kind of World Will Tigers Build?</h2>
+          ${paragraphBlock(page.prompt)}
+        </article>
+        <article class="list-panel">
+          <p class="eyebrow">Selected Work May Be Featured In</p>
+          <ul>${listBlock(page.featuredIn)}</ul>
+        </article>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Choose Your Form</p>
+        <h2>Worldbuilding Across Media</h2>
+      </div>
+      <div class="card-grid card-grid-three">
+        ${page.forms
+          .map(
+            (item) => `
+              <article class="info-card">
+                <h3>${item.title}</h3>
+                <p>${item.body}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+    <section class="content-section card-grid card-grid-two">
+      <article class="list-panel">
+        <p class="eyebrow">Eligibility</p>
+        <ul>${listBlock(page.eligibility)}</ul>
+      </article>
+      <article class="list-panel">
+        <p class="eyebrow">How to Submit</p>
+        <ul>${listBlock(page.submissionItems)}</ul>
+        <p class="microcopy">Submission deadline and form link to be announced.</p>
+      </article>
+    </section>
+    <section class="content-section feature-grid">
+      <article class="section-prose section-frame">
+        <p class="eyebrow">Selection Process</p>
+        <h2>Concepts, Drafts, and Works in Progress Welcome</h2>
+        ${paragraphBlock(page.selection)}
+      </article>
+      <article class="section-prose section-frame">
+        <p class="eyebrow">For Faculty</p>
+        <h2>Bring the Prompt into the Classroom</h2>
+        ${paragraphBlock(page.faculty)}
+      </article>
+    </section>
+  `;
+}
+
+function renderAbout() {
+  const page = siteData.pages.about;
+  return `
+    ${renderPageHeader(page.pageHeader)}
+    <section class="content-section card-grid card-grid-two">
+      ${page.sections
+        .map(
+          (section) => `
+            <article class="section-prose section-frame" id="${section.id}">
+              <p class="eyebrow">${section.eyebrow}</p>
+              <h2>${section.title}</h2>
+              ${paragraphBlock(section.paragraphs)}
+              ${section.bullets ? `<ul>${listBlock(section.bullets)}</ul>` : ""}
+            </article>
+          `
+        )
+        .join("")}
+    </section>
+  `;
+}
+
+function renderEventInformation() {
+  const page = siteData.pages["event-information"];
+  return `
+    ${renderPageHeader(page.pageHeader)}
+    <section class="content-section card-grid card-grid-two">
+      ${page.sections
+        .map(
+          (section) => `
+            <article class="section-prose section-frame" id="${section.id}">
+              <p class="eyebrow">${section.eyebrow}</p>
+              <h2>${section.title}</h2>
+              ${paragraphBlock(section.paragraphs)}
+            </article>
+          `
+        )
+        .join("")}
+    </section>
+  `;
+}
+
+const pageRenderers = {
+  home: renderHome,
+  schedule: renderSchedule,
+  "john-jennings": renderJohnJennings,
+  exhibition: renderExhibition,
+  "build-your-tiger-world": renderBuildYourTigerWorld,
+  about: renderAbout,
+  "event-information": renderEventInformation
+};
+
+function renderCurrentPage() {
+  const pageKey = document.body.dataset.page;
+  renderHeader(pageKey);
+  renderFooter();
+  const renderer = pageRenderers[pageKey];
+  document.getElementById("page-content").innerHTML = renderer ? renderer() : "";
 }
 
 function setupMenu() {
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.getElementById("site-nav");
+  if (!toggle || !nav) {
+    return;
+  }
 
   toggle.addEventListener("click", () => {
     const expanded = toggle.getAttribute("aria-expanded") === "true";
@@ -190,37 +471,5 @@ function setupMenu() {
   });
 }
 
-function setupRevealObserver() {
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const revealItems = document.querySelectorAll(".reveal");
-
-  if (prefersReducedMotion) {
-    revealItems.forEach((item) => item.classList.add("visible"));
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.18 }
-  );
-
-  revealItems.forEach((item) => {
-    const rect = item.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.9) {
-      item.classList.add("visible");
-      return;
-    }
-    observer.observe(item);
-  });
-}
-
-renderSite();
+renderCurrentPage();
 setupMenu();
-setupRevealObserver();
