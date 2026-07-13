@@ -56,7 +56,7 @@ function renderFooter() {
   const partnerLogos = site.partnerLogos
     .map(
       (item) => `
-        <figure class="footer-logo-card">
+        <figure class="footer-logo-card${item.lightBackground ? " footer-logo-card-light" : ""}">
           <img src="${item.image}" alt="${item.alt}" />
           <figcaption>${item.name}</figcaption>
         </figure>
@@ -175,7 +175,7 @@ function renderHome() {
     <section class="content-section">
       <div class="section-heading">
         <p class="eyebrow">Program Highlights</p>
-        <h2>Scholarship, exhibition, performance, and collective imagination.</h2>
+        <h2>Scholarship, installation, performance, and collective imagination.</h2>
       </div>
       <div class="card-grid card-grid-three">
         ${page.highlights
@@ -279,57 +279,8 @@ function renderJohnJennings() {
         <p class="eyebrow">Comic Book Signing</p>
         <h2>After the Craft Talk</h2>
         ${paragraphBlock(page.signing)}
-        <a class="text-link" href="exhibition.html">Explore the Exhibition</a>
+        <a class="text-link" href="schedule.html">Return to the Schedule</a>
       </article>
-    </section>
-  `;
-}
-
-function renderExhibition() {
-  const { site, pages } = siteData;
-  const page = pages.exhibition;
-  return `
-    ${renderPageHeader(page.pageHeader)}
-    <section class="content-section feature-band">
-      <div class="feature-grid">
-        <article class="section-prose section-frame">
-          <p class="eyebrow">Exhibition Overview</p>
-          <h2>Visualizing the Black Speculative South</h2>
-          ${paragraphBlock(page.overview)}
-        </article>
-        <figure class="portrait-frame section-frame">
-          <img src="${site.heroImage}" alt="${site.heroAlt}" />
-        </figure>
-      </div>
-    </section>
-    <section class="content-section card-grid card-grid-two">
-      <article class="list-panel">
-        <p class="eyebrow">What Visitors Will See</p>
-        <ul>${listBlock(page.components)}</ul>
-        <p class="response-prompt"><strong>Response wall prompt:</strong> What kind of world will Tigers build?</p>
-      </article>
-      <article class="section-prose section-frame">
-        <p class="eyebrow">College of Liberal Arts Installation</p>
-        <h2>Companion Installation</h2>
-        ${paragraphBlock(page.claInstallation)}
-      </article>
-    </section>
-    <section class="content-section feature-grid">
-      <article class="section-prose section-frame">
-        <p class="eyebrow">Student Responses</p>
-        <h2>Selected Work May Appear</h2>
-        <p>${page.studentWork.intro}</p>
-      </article>
-      <article class="list-panel">
-        <p class="eyebrow">Student Work May Include</p>
-        <ul>${listBlock(page.studentWork.items)}</ul>
-      </article>
-    </section>
-    <section class="content-section section-frame visit-strip">
-      <div><span>Dates</span><strong>Exhibition dates to be announced</strong></div>
-      <div><span>Location</span><strong>College of Liberal Arts</strong></div>
-      <div><span>Hours</span><strong>Viewing hours to be announced</strong></div>
-      <div><span>Admission</span><strong>Free</strong></div>
     </section>
   `;
 }
@@ -416,34 +367,12 @@ function renderAbout() {
   `;
 }
 
-function renderEventInformation() {
-  const page = siteData.pages["event-information"];
-  return `
-    ${renderPageHeader(page.pageHeader)}
-    <section class="content-section card-grid card-grid-two">
-      ${page.sections
-        .map(
-          (section) => `
-            <article class="section-prose section-frame" id="${section.id}">
-              <p class="eyebrow">${section.eyebrow}</p>
-              <h2>${section.title}</h2>
-              ${paragraphBlock(section.paragraphs)}
-            </article>
-          `
-        )
-        .join("")}
-    </section>
-  `;
-}
-
 const pageRenderers = {
   home: renderHome,
   schedule: renderSchedule,
   "john-jennings": renderJohnJennings,
-  exhibition: renderExhibition,
   "build-your-tiger-world": renderBuildYourTigerWorld,
-  about: renderAbout,
-  "event-information": renderEventInformation
+  about: renderAbout
 };
 
 function renderCurrentPage() {

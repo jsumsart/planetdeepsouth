@@ -21,18 +21,12 @@ const siteData = {
       { label: "Home", href: "index.html", page: "home" },
       { label: "Schedule", href: "schedule.html", page: "schedule" },
       { label: "John Jennings", href: "john-jennings.html", page: "john-jennings" },
-      { label: "Exhibition", href: "exhibition.html", page: "exhibition" },
       {
         label: "Build Your Tiger World",
         href: "build-your-tiger-world.html",
         page: "build-your-tiger-world"
       },
-      { label: "About", href: "about.html", page: "about" },
-      {
-        label: "Event Information",
-        href: "event-information.html",
-        page: "event-information"
-      }
+      { label: "About + Information", href: "about.html", page: "about" }
     ],
     partnerLogos: [
       {
@@ -43,7 +37,8 @@ const siteData = {
       {
         name: "College of Liberal Arts",
         image: "assets/college-of-liberal-arts-logo.png",
-        alt: "College of Liberal Arts logo."
+        alt: "College of Liberal Arts logo.",
+        lightBackground: true
       }
     ],
     footerLegal: "A public HBCU in Jackson, Mississippi."
@@ -54,7 +49,7 @@ const siteData = {
       intro:
         "Planet Deep South 2026 explores the intersections of Black speculative culture, HBCU creativity, visual storytelling, literature, fashion, music, theatre, and the future of the American South.",
       paragraphs: [
-        "The day will include interdisciplinary panels, student presentations, a John Jennings exhibition, an illustrated artist craft talk, a comic book signing, an ekphrastic reading, and an evening courtyard reception.",
+        "The day will include interdisciplinary panels, student presentations, a John Jennings installation, an illustrated artist craft talk, a comic book signing, an ekphrastic reading, and an evening courtyard reception.",
         "The program welcomes scholars, artists, students, educators, alumni, and community guests into a shared conversation about Black speculative futures."
       ]
     },
@@ -106,7 +101,7 @@ const siteData = {
             "Students and invited writers share short creative works inspired by the art of John Jennings."
         },
         {
-          title: "John Jennings Exhibition",
+          title: "John Jennings Installation",
           body:
             "A special installation introduces audiences to Jennings's visual practice, comics, speculative worlds, and Black cultural production."
         },
@@ -171,7 +166,7 @@ const siteData = {
           time: "12:30-1:30 p.m.",
           title: "Exhibition Viewing and Midday Break",
           description: [
-            "Guests are invited to view the John Jennings exhibition, continue conversations from the morning panels, and spend time with related displays and student work."
+            "Guests are invited to view the John Jennings installation, continue conversations from the morning panels, and spend time with related displays and student work."
           ],
           meta: ["College of Liberal Arts"]
         },
@@ -279,47 +274,6 @@ const siteData = {
         "Signing procedures, available titles, and purchase information will be posted before the event."
       ]
     },
-    exhibition: {
-      pageHeader: {
-        eyebrow: "Art and Visual Culture",
-        title: "John Jennings Exhibition",
-        intro:
-          "A special presentation of work by John Jennings will be installed in the College of Liberal Arts in conjunction with Planet Deep South 2026."
-      },
-      overview: [
-        "The exhibition introduces visitors to John Jennings's distinctive approach to comics, speculative art, graphic design, collage, visual storytelling, and Black cultural production.",
-        "Through images, characters, narrative fragments, and worldbuilding, Jennings's work examines the relationship between history, memory, identity, horror, technology, and the future.",
-        "The exhibition serves as the visual center of Planet Deep South and provides a foundation for the day's panels, student projects, creative readings, craft talk, and reception."
-      ],
-      components: [
-        "Original or reproduced artwork",
-        "Comic and graphic narrative imagery",
-        "Character and environment designs",
-        "Book covers and publication work",
-        "Interpretive material about John Jennings",
-        "Information about Planet Deep South",
-        "Student responses to Jennings's work",
-        "A Planet Deep South timeline",
-        "A public response wall"
-      ],
-      claInstallation: [
-        "A companion installation in the College of Liberal Arts will connect John Jennings's work with the broader themes of Planet Deep South.",
-        "This installation will introduce visitors to the event, feature selected imagery, highlight the history of Planet Deep South, and showcase student worldbuilding projects from across the university."
-      ],
-      studentWork: {
-        intro:
-          "Selected student projects created through Build Your Tiger World may be displayed alongside the exhibition or presented through digital screens, projections, printed materials, and live programs.",
-        items: [
-          "Illustration and comics",
-          "Creative writing",
-          "Fashion concepts",
-          "Sound and music",
-          "Performance",
-          "Digital media",
-          "Interdisciplinary projects"
-        ]
-      }
-    },
     "build-your-tiger-world": {
       pageHeader: {
         eyebrow: "Student Participation",
@@ -372,7 +326,7 @@ const siteData = {
       featuredIn: [
         "The Build Your Tiger World showcase",
         "The Writing the Image creative reading",
-        "The John Jennings exhibition",
+        "The John Jennings installation",
         "The College of Liberal Arts installation",
         "The futurist fashion presentation",
         "The evening reception",
@@ -397,7 +351,7 @@ const siteData = {
         "Any technical or installation needs"
       ],
       selection: [
-        "A small review group will select student work based on relevance to the theme, clarity of concept, creativity, and suitability for the available program or exhibition format.",
+        "A small review group will select student work based on relevance to the theme, clarity of concept, creativity, and suitability for the available presentation format.",
         "Strong concepts, drafts, design proposals, and works in progress may also be considered."
       ],
       faculty: [
@@ -407,9 +361,9 @@ const siteData = {
     },
     about: {
       pageHeader: {
-        title: "About Planet Deep South",
+        title: "About + Information",
         intro:
-          "Planet Deep South is a platform for Black speculative thought, creative practice, scholarship, and Southern worldbuilding."
+          "Planet Deep South is a platform for Black speculative thought, creative practice, scholarship, and Southern worldbuilding. Here is the core background and visitor information for the 2026 convening."
       },
       sections: [
         {
@@ -444,7 +398,7 @@ const siteData = {
           title: "Planet Deep South 2026",
           paragraphs: [
             "The 2026 program returns Planet Deep South to Jackson as a focused one-day gathering centered on John Jennings and his artwork.",
-            "Rather than operating as a large multi-day conference, the 2026 event brings together a small number of panels, student presentations, exhibition experiences, creative readings, an artist craft talk, a comic book signing, and an evening reception."
+            "The 2026 event brings together panels, creative readings, a John Jennings installation, an artist craft talk, a comic book signing, and an evening reception."
           ]
         },
         {
@@ -466,16 +420,7 @@ const siteData = {
             "Digital Humanities",
             "Media and Communication"
           ]
-        }
-      ]
-    },
-    "event-information": {
-      pageHeader: {
-        title: "Event Information",
-        intro:
-          "Everything you need to plan your visit to Planet Deep South."
-      },
-      sections: [
+        },
         {
           id: "location",
           eyebrow: "Date and Location",
@@ -484,15 +429,6 @@ const siteData = {
             "Wednesday, September 30, 2026",
             "College of Liberal Arts, Jackson State University, 1400 John R. Lynch Street, Jackson, Mississippi 39217",
             "All public programs for Planet Deep South 2026 will take place in the College of Liberal Arts."
-          ]
-        },
-        {
-          id: "audience",
-          eyebrow: "Audience",
-          title: "Who Should Attend",
-          paragraphs: [
-            "Planet Deep South welcomes scholars, artists, students, educators, alumni, and members of the wider community.",
-            "The program is designed for anyone interested in Black speculative culture, visual storytelling, Southern futurity, and interdisciplinary creative practice."
           ]
         },
         {
@@ -505,57 +441,22 @@ const siteData = {
           ]
         },
         {
-          id: "parking",
-          eyebrow: "Parking",
-          title: "Campus Arrival",
+          id: "visit-details",
+          eyebrow: "Visitor Notes",
+          title: "Arrival, Access, and Contact",
           paragraphs: [
-            "Visitor parking instructions, recommended entrances, and event check-in information will be posted before the event.",
-            "Guests should allow additional time for parking and arrival."
+            "Visitor parking instructions, recommended entrances, and event check-in information will be posted before the event. Guests should allow additional time for parking and arrival.",
+            "Guests who require accommodations should contact the Planet Deep South organizing team in advance.",
+            "For questions about programming, participation, accessibility, partnerships, or media inquiries, email theeadhlab@gmail.com."
           ]
         },
         {
-          id: "accessibility",
-          eyebrow: "Accessibility",
-          title: "Request an Accommodation",
+          id: "reception",
+          eyebrow: "Evening Reception",
+          title: "Tiger Futures",
           paragraphs: [
-            "Jackson State University is committed to providing an accessible and welcoming event.",
-            "Guests who require accommodations should contact the Planet Deep South organizing team in advance."
-          ]
-        },
-        {
-          id: "weather",
-          eyebrow: "Weather Plan",
-          title: "Courtyard Reception Weather Plan",
-          paragraphs: [
-            "The Tiger Futures reception is planned as an outdoor courtyard event.",
-            "An indoor backup location will be identified and used in the event of inclement weather."
-          ]
-        },
-        {
-          id: "books",
-          eyebrow: "Books",
-          title: "Book Sales and Signing",
-          paragraphs: [
-            "A selected range of books by John Jennings will be available for purchase through the event's designated bookselling partner.",
-            "Additional information about titles, pricing, and advance purchase options will be announced."
-          ]
-        },
-        {
-          id: "dress",
-          eyebrow: "Dress",
-          title: "What to Wear",
-          paragraphs: [
-            "Daytime programs are casual.",
-            "Guests attending the evening reception are welcome to wear creative, futuristic, artistic, or Black Southern-inspired attire, but themed dress is not required."
-          ]
-        },
-        {
-          id: "contact",
-          eyebrow: "Contact",
-          title: "Planet Deep South Organizing Team",
-          paragraphs: [
-            "For questions about programming, participation, accessibility, partnerships, or media inquiries, contact the Planet Deep South organizing team.",
-            "Email: theeadhlab@gmail.com"
+            "The Tiger Futures reception is planned as an outdoor courtyard gathering with an indoor backup location available in the event of inclement weather.",
+            "Daytime programs are casual. Guests attending the reception are welcome to wear creative, futuristic, artistic, or Black Southern-inspired attire, but themed dress is not required."
           ]
         }
       ]

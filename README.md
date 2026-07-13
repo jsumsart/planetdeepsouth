@@ -1,11 +1,11 @@
 # Planet Deep South
 
-Static multi-page website for **Planet Deep South 2026: Building Tiger Worlds**, a one-day Jackson State University program on **Wednesday, September 30, 2026**.
+Static multi-page website for **Planet Deep South 2026**, a one-day Jackson State University program on **Wednesday, September 30, 2026**.
 
 ## Files
 
 - `index.html`: homepage
-- `schedule.html`, `john-jennings.html`, `exhibition.html`, `build-your-tiger-world.html`, `about.html`, `event-information.html`: additional static pages
+- `schedule.html`, `john-jennings.html`, `build-your-tiger-world.html`, `about.html`: additional static pages
 - `styles.css`: shared multi-page visual system and responsive layout
 - `site-data.js`: shared navigation/footer data plus per-page content
 - `app.js`: shared header/footer and page rendering logic
@@ -31,4 +31,4 @@ This project is designed to work as a GitHub Pages project site:
 
 ## Updating content
 
-Edit `site-data.js` to replace placeholders such as announced speakers, room locations, submission links, contact email, and exhibition details as they are confirmed.
+Edit `site-data.js` to replace placeholders such as announced speakers, room locations, submission links, contact email, and program details as they are confirmed.
