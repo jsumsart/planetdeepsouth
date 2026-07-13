@@ -506,56 +506,6 @@ section[id] {
   overflow: hidden;
 }
 
-.page-intro::after,
-.editorial-split::after,
-.feature-band::before,
-.closing-banner::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  opacity: 0.13;
-  z-index: -1;
-}
-
-.page-intro::after {
-  width: 28rem;
-  height: 28rem;
-  top: -6rem;
-  right: -8rem;
-  background-image: url("assets/decor-globe.png");
-  opacity: 0.16;
-}
-
-.editorial-split::after {
-  width: 30rem;
-  height: 30rem;
-  right: -11rem;
-  bottom: -12rem;
-  background-image: url("assets/decor-starburst.png");
-  opacity: 0.14;
-}
-
-.feature-band::before {
-  width: 24rem;
-  height: 24rem;
-  left: -8rem;
-  top: -7rem;
-  background-image: url("assets/decor-branch-triptych.png");
-  opacity: 0.14;
-}
-
-.closing-banner::after {
-  width: 26rem;
-  height: 26rem;
-  right: -6rem;
-  bottom: -6rem;
-  background-image: url("assets/decor-planet-cyan.png");
-  opacity: 0.2;
-}
-
 .lede {
   max-width: 42rem;
   margin-top: 1rem;
@@ -1076,13 +1026,8 @@ section[id] {
     min-height: 56vh;
   }
 
-  .page-intro::after,
-  .editorial-split::after,
-  .feature-band::before,
-  .closing-banner::after {
-    width: 18rem;
-    height: 18rem;
-    opacity: 0.12;
+  .hero-banner img {
+    object-position: 36% 30%;
   }
 
   .hero-copy {
