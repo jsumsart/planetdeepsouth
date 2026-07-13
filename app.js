@@ -53,6 +53,16 @@ function renderFooter() {
   const utilityLinks = site.utilityLinks
     .map((item) => `<a href="${item.href}"${linkAttrs(item.href)}>${item.label}</a>`)
     .join("");
+  const partnerLogos = site.partnerLogos
+    .map(
+      (item) => `
+        <figure class="footer-logo-card">
+          <img src="${item.image}" alt="${item.alt}" />
+          <figcaption>${item.name}</figcaption>
+        </figure>
+      `
+    )
+    .join("");
 
   document.getElementById("site-footer").innerHTML = `
     <div class="footer-grid">
@@ -71,6 +81,14 @@ function renderFooter() {
         ${site.footerLegal ? `<p class="footer-legal">${site.footerLegal}</p>` : ""}
       </div>
     </div>
+    <section class="footer-partners">
+      <div class="footer-partners-header">
+        <p class="footer-heading">Presented With</p>
+      </div>
+      <div class="footer-logo-row">
+        ${partnerLogos}
+      </div>
+    </section>
   `;
 }
 
