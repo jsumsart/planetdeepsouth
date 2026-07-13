@@ -78,6 +78,96 @@ body::after {
     28rem auto;
 }
 
+body[data-page="home"]::after {
+  background-image:
+    url("assets/decor-lightning-coral.png"),
+    url("assets/decor-speech-bubble-texture.png"),
+    url("assets/decor-branch-triptych.png"),
+    url("assets/decor-planet-pastel.png");
+  background-position:
+    left -10rem top 24rem,
+    right -14rem top 58rem,
+    right -16rem top 122rem,
+    left -14rem bottom 22rem;
+  background-size:
+    24rem auto,
+    30rem auto,
+    26rem auto,
+    28rem auto;
+}
+
+body[data-page="schedule"]::after {
+  background-image:
+    url("assets/decor-dots-orange.png"),
+    url("assets/decor-lightning-coral.png"),
+    url("assets/decor-globe.png"),
+    url("assets/decor-planet-cyan.png");
+  background-position:
+    right -12rem top 16rem,
+    left -10rem top 46rem,
+    right -15rem bottom 18rem,
+    left -14rem bottom 34rem;
+  background-size:
+    30rem auto,
+    18rem auto,
+    28rem auto,
+    24rem auto;
+}
+
+body[data-page="john-jennings"]::after {
+  background-image:
+    url("assets/decor-starburst.png"),
+    url("assets/decor-speech-bubble-texture.png"),
+    url("assets/decor-planet-pastel.png"),
+    url("assets/decor-branch-triptych.png");
+  background-position:
+    left -12rem top 18rem,
+    right -16rem top 54rem,
+    right -12rem bottom 24rem,
+    left -15rem bottom 52rem;
+  background-size:
+    28rem auto,
+    28rem auto,
+    26rem auto,
+    24rem auto;
+}
+
+body[data-page="build-your-tiger-world"]::after {
+  background-image:
+    url("assets/decor-branch-triptych.png"),
+    url("assets/decor-lightning-coral.png"),
+    url("assets/decor-dots-orange.png"),
+    url("assets/decor-speech-bubble-texture.png");
+  background-position:
+    left -12rem top 20rem,
+    right -12rem top 48rem,
+    left -10rem bottom 24rem,
+    right -14rem bottom 12rem;
+  background-size:
+    28rem auto,
+    20rem auto,
+    26rem auto,
+    24rem auto;
+}
+
+body[data-page="about"]::after {
+  background-image:
+    url("assets/decor-globe.png"),
+    url("assets/decor-starburst.png"),
+    url("assets/decor-speech-bubble-texture.png"),
+    url("assets/decor-planet-cyan.png");
+  background-position:
+    right -14rem top 14rem,
+    left -12rem top 52rem,
+    right -16rem bottom 18rem,
+    left -14rem bottom 36rem;
+  background-size:
+    26rem auto,
+    26rem auto,
+    28rem auto,
+    24rem auto;
+}
+
 .site-shell {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
@@ -112,6 +202,70 @@ body::after {
   top: 88rem;
   left: -15rem;
   background-image: url("assets/decor-starburst.png");
+}
+
+body[data-page="schedule"] .site-shell::before {
+  top: 28rem;
+  right: -18rem;
+  background-image: url("assets/decor-speech-bubble-texture.png");
+  width: 28rem;
+  height: 28rem;
+}
+
+body[data-page="schedule"] .site-shell::after {
+  top: 94rem;
+  left: -17rem;
+  background-image: url("assets/decor-lightning-coral.png");
+  width: 24rem;
+  height: 24rem;
+}
+
+body[data-page="john-jennings"] .site-shell::before {
+  top: 34rem;
+  right: -18rem;
+  background-image: url("assets/decor-planet-pastel.png");
+  width: 28rem;
+  height: 28rem;
+}
+
+body[data-page="john-jennings"] .site-shell::after {
+  top: 86rem;
+  left: -14rem;
+  background-image: url("assets/decor-dots-orange.png");
+  width: 26rem;
+  height: 26rem;
+}
+
+body[data-page="build-your-tiger-world"] .site-shell::before {
+  top: 30rem;
+  right: -16rem;
+  background-image: url("assets/decor-starburst.png");
+  width: 28rem;
+  height: 28rem;
+}
+
+body[data-page="build-your-tiger-world"] .site-shell::after {
+  top: 92rem;
+  left: -16rem;
+  background-image: url("assets/decor-planet-cyan.png");
+  width: 26rem;
+  height: 26rem;
+}
+
+body[data-page="about"] .site-shell::before {
+  top: 26rem;
+  right: -16rem;
+  background-image: url("assets/decor-branch-triptych.png");
+  width: 28rem;
+  height: 28rem;
+}
+
+body[data-page="about"] .site-shell::after {
+  top: 98rem;
+  left: -17rem;
+  background-image: url("assets/decor-lightning-coral.png");
+  width: 24rem;
+  height: 24rem;
 }
 
 a {
