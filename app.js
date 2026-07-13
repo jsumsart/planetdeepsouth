@@ -6,10 +6,14 @@ function listBlock(items) {
   return items.map((item) => `<li>${item}</li>`).join("");
 }
 
+function linkAttrs(href) {
+  return href.startsWith("http") ? ' target="_blank" rel="noreferrer"' : "";
+}
+
 function renderHeader(currentPage) {
   const { site } = siteData;
   const utilityLinks = site.utilityLinks
-    .map((link) => `<a href="${link.href}">${link.label}</a>`)
+    .map((link) => `<a href="${link.href}"${linkAttrs(link.href)}>${link.label}</a>`)
     .join("");
   const navLinks = site.nav
     .map((item) => {
@@ -47,7 +51,7 @@ function renderFooter() {
   const { site } = siteData;
   const navLinks = site.nav.map((item) => `<a href="${item.href}">${item.label}</a>`).join("");
   const utilityLinks = site.utilityLinks
-    .map((item) => `<a href="${item.href}">${item.label}</a>`)
+    .map((item) => `<a href="${item.href}"${linkAttrs(item.href)}>${item.label}</a>`)
     .join("");
 
   document.getElementById("site-footer").innerHTML = `
@@ -64,7 +68,7 @@ function renderFooter() {
       <div>
         <p class="footer-heading">Links</p>
         <div class="footer-links">${utilityLinks}</div>
-        <p class="footer-legal">${site.footerLegal}</p>
+        ${site.footerLegal ? `<p class="footer-legal">${site.footerLegal}</p>` : ""}
       </div>
     </div>
   `;
@@ -102,26 +106,24 @@ function renderHome() {
           <a class="button button-primary" href="${page.hero.primaryButton.href}">${page.hero.primaryButton.label}</a>
           <a class="button button-secondary" href="${page.hero.secondaryButton.href}">${page.hero.secondaryButton.label}</a>
         </div>
-        <a class="text-link" href="${page.hero.tertiaryLink.href}">${page.hero.tertiaryLink.label}</a>
-        <div class="chip-row">
-          ${page.hero.chips.map((chip) => `<span class="chip">${chip}</span>`).join("")}
-        </div>
       </section>
     </section>
 
     <section class="content-section editorial-split">
-      <div class="section-heading">
-        <p class="eyebrow">Event Overview</p>
-        <h2>${shared.eventOverview.title}</h2>
+      <div class="section-heading section-heading-split">
+        <div>
+          <p class="eyebrow">Event Overview</p>
+          <h2>${shared.eventOverview.title}</h2>
+        </div>
+        <aside class="pull-quote">
+          <p>Planet Deep South returns to Jackson as a focused gathering rooted in scholarship, art, performance, and Black speculative futures.</p>
+        </aside>
       </div>
-      <div class="editorial-columns">
+      <div class="editorial-columns editorial-columns-single">
         <div class="section-prose">
           <p class="lede-small">${shared.eventOverview.intro}</p>
           ${paragraphBlock(shared.eventOverview.paragraphs)}
         </div>
-        <aside class="pull-quote">
-          <p>Planet Deep South returns to Jackson State University as a concentrated campus gathering rooted in scholarship, art, performance, and Black speculative futures.</p>
-        </aside>
       </div>
     </section>
 
@@ -146,7 +148,7 @@ function renderHome() {
           <p>The program will explore the relationship between Black visual culture and future-making, as well as the role of artists, writers, and educators in imagining worlds beyond the present.</p>
           <div class="detail-pair">
             <strong>${site.date}</strong>
-            <span>Time and location to be announced</span>
+            <span>Time to be announced · College of Liberal Arts</span>
           </div>
         </article>
       </div>
@@ -171,26 +173,10 @@ function renderHome() {
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Campus Collaboration</p>
-        <h2>Across the Arts and Humanities</h2>
-      </div>
-      <div class="feature-grid">
-        <article class="section-prose section-frame">
-          ${paragraphBlock(page.collaboration.paragraphs)}
-        </article>
-        <article class="list-panel">
-          <p class="eyebrow">Participating Areas May Include</p>
-          <ul>${listBlock(shared.collaborationAreas)}</ul>
-        </article>
-      </div>
-    </section>
-
     <section class="content-section closing-banner">
       <div>
         <p class="eyebrow">Join Us at Planet Deep South</p>
-        <h2>Spend the day exploring art, scholarship, creative practice, and the future of the Black South at Jackson State University.</h2>
+        <h2>Spend the day exploring art, scholarship, creative practice, and the future of the Black South.</h2>
       </div>
       <div class="button-row">
         <a class="button button-primary" href="schedule.html">View the Schedule</a>
@@ -242,7 +228,7 @@ function renderJohnJennings() {
         </article>
         <aside class="media-stack">
           <figure class="portrait-frame section-frame">
-            <img src="${site.heroImage}" alt="${site.heroAlt}" />
+            <img src="${site.johnJenningsImage}" alt="${site.johnJenningsAlt}" />
           </figure>
           <div class="list-panel">
             <p class="eyebrow">Selected Works</p>
@@ -260,7 +246,7 @@ function renderJohnJennings() {
           ${paragraphBlock(page.program.paragraphs)}
           <div class="detail-pair">
             <strong>${siteData.site.date}</strong>
-            <span>Time and location to be announced</span>
+            <span>Time to be announced · College of Liberal Arts</span>
           </div>
           <a class="button button-primary" href="schedule.html">View the Full Schedule</a>
         </article>
@@ -323,7 +309,7 @@ function renderExhibition() {
     </section>
     <section class="content-section section-frame visit-strip">
       <div><span>Dates</span><strong>Exhibition dates to be announced</strong></div>
-      <div><span>Location</span><strong>Gallery location to be announced</strong></div>
+      <div><span>Location</span><strong>College of Liberal Arts</strong></div>
       <div><span>Hours</span><strong>Viewing hours to be announced</strong></div>
       <div><span>Admission</span><strong>Free</strong></div>
     </section>
