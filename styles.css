@@ -54,10 +54,64 @@ body::before {
   mask-image: radial-gradient(circle at center, black 42%, transparent 100%);
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image:
+    url("assets/decor-lightning-coral.png"),
+    url("assets/decor-speech-bubble-texture.png"),
+    url("assets/decor-branch-triptych.png"),
+    url("assets/decor-planet-pastel.png");
+  background-repeat: no-repeat;
+  background-position:
+    left -10rem top 24rem,
+    right -14rem top 58rem,
+    right -16rem top 122rem,
+    left -14rem bottom 22rem;
+  background-size:
+    24rem auto,
+    30rem auto,
+    26rem auto,
+    28rem auto;
+}
+
 .site-shell {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
   padding-bottom: var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.site-shell::before,
+.site-shell::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.12;
+  z-index: -1;
+}
+
+.site-shell::before {
+  width: 34rem;
+  height: 34rem;
+  top: 36rem;
+  right: -17rem;
+  background-image: url("assets/decor-dots-orange.png");
+}
+
+.site-shell::after {
+  width: 30rem;
+  height: 30rem;
+  top: 88rem;
+  left: -15rem;
+  background-image: url("assets/decor-starburst.png");
 }
 
 a {
@@ -313,38 +367,39 @@ section[id] {
 }
 
 .page-intro::after {
-  width: 19rem;
-  height: 19rem;
-  top: -3rem;
-  right: -5rem;
+  width: 28rem;
+  height: 28rem;
+  top: -6rem;
+  right: -8rem;
   background-image: url("assets/decor-globe.png");
+  opacity: 0.16;
 }
 
 .editorial-split::after {
-  width: 20rem;
-  height: 20rem;
-  right: -7rem;
-  bottom: -8rem;
+  width: 30rem;
+  height: 30rem;
+  right: -11rem;
+  bottom: -12rem;
   background-image: url("assets/decor-starburst.png");
-  opacity: 0.1;
+  opacity: 0.14;
 }
 
 .feature-band::before {
-  width: 18rem;
-  height: 18rem;
-  left: -5rem;
-  top: -5rem;
-  background-image: url("assets/decor-dots-orange.png");
-  opacity: 0.1;
+  width: 24rem;
+  height: 24rem;
+  left: -8rem;
+  top: -7rem;
+  background-image: url("assets/decor-branch-triptych.png");
+  opacity: 0.14;
 }
 
 .closing-banner::after {
-  width: 18rem;
-  height: 18rem;
-  right: -4rem;
-  bottom: -4rem;
+  width: 26rem;
+  height: 26rem;
+  right: -6rem;
+  bottom: -6rem;
   background-image: url("assets/decor-planet-cyan.png");
-  opacity: 0.14;
+  opacity: 0.2;
 }
 
 .lede {
@@ -529,7 +584,7 @@ section[id] {
 .info-card,
 .timeline-item,
 .section-frame {
-  padding: 1.6rem;
+  padding: 1.85rem;
   border-radius: var(--radius-md);
   background: var(--panel-soft);
 }
@@ -731,6 +786,31 @@ section[id] {
 }
 
 @media (max-width: 1180px) {
+  body::after {
+    background-size:
+      18rem auto,
+      24rem auto,
+      20rem auto,
+      22rem auto;
+    background-position:
+      left -8rem top 28rem,
+      right -12rem top 62rem,
+      right -13rem top 126rem,
+      left -11rem bottom 18rem;
+  }
+
+  .site-shell::before {
+    width: 24rem;
+    height: 24rem;
+    right: -13rem;
+  }
+
+  .site-shell::after {
+    width: 22rem;
+    height: 22rem;
+    left: -12rem;
+  }
+
   .hero-banner {
     min-height: 68vh;
   }
@@ -745,6 +825,12 @@ section[id] {
 }
 
 @media (max-width: 900px) {
+  body::after,
+  .site-shell::before,
+  .site-shell::after {
+    opacity: 0.1;
+  }
+
   .topbar-inner,
   .editorial-columns,
   .feature-grid,
@@ -774,6 +860,25 @@ section[id] {
 }
 
 @media (max-width: 760px) {
+  body::after {
+    background-size:
+      12rem auto,
+      16rem auto,
+      14rem auto,
+      16rem auto;
+    background-position:
+      left -5rem top 24rem,
+      right -7rem top 48rem,
+      right -8rem top 94rem,
+      left -7rem bottom 12rem;
+    opacity: 0.12;
+  }
+
+  .site-shell::before,
+  .site-shell::after {
+    display: none;
+  }
+
   .site-shell {
     width: min(calc(100% - 1.25rem), var(--max-width));
   }
@@ -821,9 +926,9 @@ section[id] {
   .editorial-split::after,
   .feature-band::before,
   .closing-banner::after {
-    width: 12rem;
-    height: 12rem;
-    opacity: 0.08;
+    width: 18rem;
+    height: 18rem;
+    opacity: 0.12;
   }
 
   .hero-copy {
