@@ -30,15 +30,15 @@ const siteData = {
     ],
     partnerLogos: [
       {
-        name: "Thee Africana Digital Humanities Lab",
-        image: "assets/adh-lab-logo.png",
-        alt: "Thee Africana Digital Humanities Lab logo."
-      },
-      {
         name: "College of Liberal Arts",
         image: "assets/college-of-liberal-arts-logo.png",
         alt: "College of Liberal Arts logo.",
         lightBackground: true
+      },
+      {
+        name: "Thee Africana Digital Humanities Lab",
+        image: "assets/adh-lab-logo.png",
+        alt: "Thee Africana Digital Humanities Lab logo."
       }
     ],
     footerLegal: "A public HBCU in Jackson, Mississippi."
