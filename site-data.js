@@ -289,10 +289,10 @@ const siteData = {
         eyebrow: "Call for Submissions",
         title: "Planet Deep South 2026 Submissions",
         intro:
-          "Planet Deep South invites submissions of speculative creative work engaging the future of Jackson, the Black South, and Black worldmaking."
+          "Planet Deep South invites current Jackson State University students to submit speculative creative work engaging the future of Jackson, the Black South, and Black worldmaking."
       },
       prompt: [
-        "We are seeking original submissions that engage Black speculative futures, Southern worldbuilding, cultural memory, and imaginative possibility.",
+        "We are seeking original submissions from current Jackson State University students that engage Black speculative futures, Southern worldbuilding, cultural memory, and imaginative possibility.",
         "Submissions may respond to Planet Deep South through visual art, multimedia work, or written work that could be shared, staged, or performed during the evening program.",
         "We welcome work that is thoughtful, imaginative, and clearly connected to the themes of Planet Deep South."
       ],
@@ -309,14 +309,15 @@ const siteData = {
         }
       ],
       guidelines: [
+        "This call is open to current Jackson State University students only.",
         "Work should connect in some way to Black speculative futures, Southern imagination, cultural memory, or future-facing storytelling.",
         "Submissions may be complete works, excerpts, proposals, or works in progress.",
         "Written submissions should be suitable for a live reading or short performance.",
         "Multimedia submissions should include any relevant display, installation, or technical notes."
       ],
       presentation: [
-        "Selected visual and multimedia work may be displayed during Planet Deep South or featured in related documentation and promotional materials.",
-        "Selected written work may be invited into the evening readings and performance program connected to Tiger Futures.",
+        "Accepted visual and multimedia work may be displayed during Planet Deep South and may be presented or featured during the evening reception program.",
+        "Accepted written work may be invited into the evening readings, performance, or reception program connected to Tiger Futures.",
         "Final presentation format will depend on space, time, and technical feasibility."
       ],
       submissionItems: [
@@ -334,12 +335,12 @@ const siteData = {
         href: "https://form.jotform.com/262326471510046"
       },
       notes: [
-        "Individual and collaborative submissions are welcome.",
+        "Individual and collaborative submissions by current Jackson State University students are welcome.",
         "Questions about submissions may be directed to the Planet Deep South organizing team at theeadhlab@gmail.com."
       ],
       review: [
         "Submissions will be reviewed for thematic fit, clarity, creative strength, and feasibility within the event format.",
-        "A smaller number of selected works will be invited for presentation as part of Planet Deep South 2026."
+        "A smaller number of accepted works will be invited for presentation as part of Planet Deep South 2026, including possible presentation during the evening reception."
       ],
       contactItems: [
         "Email address",
