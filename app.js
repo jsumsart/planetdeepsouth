@@ -166,7 +166,7 @@ function renderHome() {
           <p>The program will explore the relationship between Black visual culture and future-making, as well as the role of artists, writers, and educators in imagining worlds beyond the present.</p>
           <div class="detail-pair">
             <strong>${site.date}</strong>
-            <span>Time to be announced · College of Liberal Arts</span>
+            <span>11:00 a.m. · College of Liberal Arts</span>
           </div>
         </article>
       </div>
@@ -264,7 +264,7 @@ function renderJohnJennings() {
           ${paragraphBlock(page.program.paragraphs)}
           <div class="detail-pair">
             <strong>${siteData.site.date}</strong>
-            <span>Time to be announced · College of Liberal Arts</span>
+            <span>11:00 a.m. · College of Liberal Arts</span>
           </div>
           <a class="button button-primary" href="schedule.html">View the Full Schedule</a>
         </article>
@@ -359,12 +359,56 @@ function renderAbout() {
               <h2>${section.title}</h2>
               ${paragraphBlock(section.paragraphs)}
               ${section.bullets ? `<ul>${listBlock(section.bullets)}</ul>` : ""}
+              ${
+                section.registrationEmbed
+                  ? `
+                    <div class="registration-embed">
+                      <iframe
+                        id="JotFormIFrame-262326200071139"
+                        title="Sign Up for Planet Deep South!"
+                        onload="window.parent.scrollTo(0,0)"
+                        allowtransparency="true"
+                        allow="geolocation; microphone; camera; fullscreen; payment"
+                        src="https://form.jotform.com/262326200071139"
+                        frameborder="0"
+                        style="min-width:100%;max-width:100%;height:539px;border:none;"
+                        scrolling="no"
+                      ></iframe>
+                    </div>
+                  `
+                  : ""
+              }
             </article>
           `
         )
         .join("")}
     </section>
   `;
+}
+
+function setupEmbeds() {
+  const frame = document.getElementById("JotFormIFrame-262326200071139");
+  if (!frame) {
+    return;
+  }
+
+  const existingScript = document.querySelector('script[data-jotform-embed="true"]');
+  const initialize = () => {
+    if (window.jotformEmbedHandler) {
+      window.jotformEmbedHandler("iframe[id='JotFormIFrame-262326200071139']", "https://form.jotform.com/");
+    }
+  };
+
+  if (existingScript) {
+    initialize();
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.src = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
+  script.dataset.jotformEmbed = "true";
+  script.onload = initialize;
+  document.body.appendChild(script);
 }
 
 const pageRenderers = {
@@ -381,6 +425,7 @@ function renderCurrentPage() {
   renderFooter();
   const renderer = pageRenderers[pageKey];
   document.getElementById("page-content").innerHTML = renderer ? renderer() : "";
+  setupEmbeds();
 }
 
 function setupMenu() {

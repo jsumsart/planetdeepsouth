@@ -49,7 +49,7 @@ const siteData = {
       intro:
         "Planet Deep South 2026 explores the intersections of Black speculative culture, HBCU creativity, visual storytelling, literature, fashion, music, theatre, and the future of the American South.",
       paragraphs: [
-        "The day will include interdisciplinary panels, student presentations, a John Jennings installation, an illustrated artist craft talk, a comic book signing, an ekphrastic reading, and an evening courtyard reception.",
+        "The day will move from opening remarks into a craft talk with John Jennings, exhibition viewing, a luncheon conversation, a scholarly roundtable, and an evening program shaped by student creativity, readings, performance, and gathering.",
         "The program welcomes scholars, artists, students, educators, alumni, and community guests into a shared conversation about Black speculative futures."
       ]
     },
@@ -76,9 +76,9 @@ const siteData = {
         eyebrow: "Jackson State University",
         title: "Planet Deep South 2026",
         summary:
-          "A one-day interdisciplinary gathering centered on John Jennings, Black speculative art, Southern futurity, and creative worldbuilding.",
+          "A one-day convening bringing together art, scholarship, creative practice, and Black speculative futures.",
         shortIntro:
-          "Planet Deep South returns to Jackson for a concentrated day of scholarship, art, comics, writing, fashion, music, performance, and collective imagination.",
+          "Join a full day of conversation, exhibition viewing, scholarly exchange, and evening performance anchored by John Jennings and the wider Planet Deep South community.",
         primaryButton: { label: "View the Schedule", href: "schedule.html" },
         secondaryButton: { label: "Explore John Jennings", href: "john-jennings.html" },
         tertiaryLink: null,
@@ -86,9 +86,9 @@ const siteData = {
       },
       highlights: [
         {
-          title: "Scholar Presentations",
+          title: "Scholarly Roundtable",
           body:
-            "Panels explore HBCU worldbuilding, Black Southern futurity, Afrofuturism, visual culture, technology, history, and the continuing legacy of Planet Deep South."
+            "Scholars and invited guests connect research, creative practice, and the broader questions at the center of Planet Deep South."
         },
         {
           title: "Build Your Tiger World",
@@ -96,9 +96,9 @@ const siteData = {
             "Participants across visual art, writing, fashion, music, theatre, comics, and interdisciplinary media present speculative work shaped by Black Southern futures."
         },
         {
-          title: "Writing the Image",
+          title: "Readings and Performance",
           body:
-            "Students and invited writers share short creative works inspired by the art of John Jennings."
+            "The evening program features literary and performative work, including readings and a dramatic monologue."
         },
         {
           title: "John Jennings Installation",
@@ -111,9 +111,9 @@ const siteData = {
             "Following the featured talk, John Jennings signs a selection of books and graphic novels."
         },
         {
-          title: "Tiger Futures Reception",
+          title: "Tiger Futures",
           body:
-            "The day closes with student futurist fashion, live blues music, gallery viewing, food, and conversation."
+            "The evening gathering highlights student creativity and opens into readings, performance, music, and conversation."
         }
       ]
     },
@@ -122,110 +122,104 @@ const siteData = {
         eyebrow: "Planet Deep South 2026",
         title: "Schedule",
         intro:
-          "Planet Deep South 2026 is a one-day gathering featuring scholarly panels, creative work, a John Jennings craft talk and signing, an art installation, and an evening reception.",
-        note: "Times and locations will be updated as program details are finalized."
+          "Planet Deep South 2026 unfolds across a full day of conversation, exhibition viewing, scholarly exchange, and evening performance.",
+        note: "Schedule subject to change."
       },
       items: [
         {
-          time: "10:00-10:15 a.m.",
-          title: "Opening Remarks",
+          time: "10:00 a.m.",
+          title: "Opening Remarks and Welcome",
           description: [
-            "A brief welcome will introduce Planet Deep South 2026, the day’s program, and the ideas guiding this year’s convening."
-          ],
-          meta: ["Speakers to be announced", "College of Liberal Arts"]
-        },
-        {
-          time: "10:15-11:15 a.m.",
-          title: "Scholarly Panel I",
-          subheading: "Planet Deep South: HBCU Worldbuilding Then and Now",
-          description: [
-            "Scholars and artists reflect on the history, development, and continuing relevance of Planet Deep South.",
-            "The conversation will consider the role of historically Black colleges and universities in Afrofuturism, speculative art, cultural preservation, technology, and the construction of Black futures."
-          ],
-          bullets: [
-            "Black Southern futurity",
-            "HBCUs as sites of worldbuilding",
-            "Afrofuturism and the American South",
-            "History, memory, and cultural survival",
-            "Art, technology, and speculative thought",
-            "The future of Planet Deep South"
-          ],
-          meta: ["Speakers to be announced", "College of Liberal Arts"]
-        },
-        {
-          time: "11:30 a.m.-12:30 p.m.",
-          title: "Scholarly Panel II",
-          subheading: "Black Southern Futures Across Media",
-          description: [
-            "A second panel brings together scholars, artists, and cultural practitioners to consider how literature, visual culture, music, performance, and digital media imagine Black futures from the South.",
-            "The discussion will move across form, method, and historical memory while staying grounded in speculative practice."
-          ],
-          meta: ["Speakers to be announced", "College of Liberal Arts"]
-        },
-        {
-          time: "12:30-1:30 p.m.",
-          title: "Exhibition Viewing and Midday Break",
-          description: [
-            "Guests are invited to view the John Jennings installation, continue conversations from the morning panels, and spend time with related displays and student work."
+            "An introduction to Planet Deep South, the ideas shaping the convening, and the day’s program."
           ],
           meta: ["College of Liberal Arts"]
         },
         {
-          time: "1:30-2:00 p.m.",
-          title: "Writing the Image",
-          subheading: "Ekphrasis and the Art of John Jennings",
+          time: "11:00 a.m.",
+          title: "Craft Talk with John Jennings",
           description: [
-            "Students and invited writers present short creative works inspired by the art of John Jennings.",
-            "Readings may include poetry, speculative fiction, spoken word, dramatic monologue, and imagined messages from the future."
+            "Artist, scholar, and writer John Jennings discusses his creative practice, storytelling, and the ideas that inform his work."
           ],
-          meta: ["Readers to be announced", "College of Liberal Arts"]
+          meta: ["Featured speaker: John Jennings", "College of Liberal Arts"]
         },
         {
-          time: "2:15-3:30 p.m.",
-          title: "Drawing the Future South",
-          subheading: "A Craft Talk with John Jennings",
+          time: "12:00 p.m.",
+          title: "Book Signing and Exhibition Viewing",
           description: [
-            "John Jennings presents an illustrated discussion of his creative process and the construction of speculative visual worlds.",
-            "The program will explore comics, character design, adaptation, horror, Afrofuturism, Black visual culture, collage, typography, historical research, and the relationship between memory and future-making.",
-            "The presentation will be followed by a moderated conversation and audience questions."
-          ],
-          meta: ["Featured speaker: John Jennings", "Moderator to be announced", "College of Liberal Arts"]
-        },
-        {
-          time: "3:30-4:00 p.m.",
-          title: "Comic Book Signing and Gallery Viewing",
-          description: [
-            "John Jennings will sign a selected range of books following his featured talk.",
-            "Books will be available for purchase through the event's designated bookselling partner.",
-            "Additional information about available titles and advance purchases will be announced."
+            "Meet John Jennings during a book signing and spend time exploring the accompanying exhibition."
           ],
           meta: ["College of Liberal Arts"]
         },
         {
-          time: "4:00-5:15 p.m.",
+          time: "1:00-2:30 p.m.",
+          title: "Lunch Break",
+          description: [
+            "A break in public programming for attendees to enjoy lunch on their own and explore nearby dining options."
+          ],
+          meta: ["College of Liberal Arts"]
+        },
+        {
+          time: "1:30-2:30 p.m.",
+          title: "Luncheon Conversation",
+          subheading: "By Invitation",
+          description: [
+            "An intimate facilitated conversation bringing invited participants together for deeper discussion around the themes of Planet Deep South."
+          ],
+          meta: ["By invitation", "College of Liberal Arts"]
+        },
+        {
+          time: "3:00-3:50 p.m.",
+          title: "Scholarly Roundtable",
+          description: [
+            "Scholars and invited guests come together for a focused discussion connecting research, creative practice, and the broader questions explored throughout the convening."
+          ],
+          meta: ["College of Liberal Arts"]
+        },
+        {
+          time: "3:50-5:30 p.m.",
+          title: "Afternoon Break",
+          description: [
+            "A pause between the daytime convening and the evening program."
+          ],
+          meta: ["College of Liberal Arts"]
+        },
+        {
+          time: "5:30 p.m.",
+          title: "Doors Open for Tiger Futures",
+          description: [
+            "Guests are invited to arrive and gather ahead of the evening program."
+          ],
+          meta: ["College of Liberal Arts"]
+        },
+        {
+          time: "6:00 p.m.",
           title: "Tiger Futures",
-          subheading: "Fashion, Art, and the Blues",
           description: [
-            "Planet Deep South concludes with an evening courtyard reception celebrating Black Southern creativity across time."
+            "An interdisciplinary evening program highlighting student creativity and imagining possible futures through art, fashion, performance, and storytelling."
           ],
-          bullets: [
-            "A student futurist fashion presentation",
-            "Live blues music",
-            "Gallery viewing",
-            "Student art and worldbuilding projects",
-            "Food and refreshments",
-            "Conversation with participating artists, scholars, students, and guests"
-          ],
-          meta: [
-            "College of Liberal Arts",
-            "An indoor backup location will be used in the event of inclement weather."
-          ]
+          meta: ["College of Liberal Arts"]
         },
         {
-          time: "5:15-5:30 p.m.",
-          title: "Closing Gathering",
+          time: "6:30 p.m.",
+          title: "Readings and Performance",
           description: [
-            "The convening closes with final reflections, thanks to participants, and an invitation to carry Planet Deep South forward."
+            "An evening presentation featuring literary and performative work, including readings and a dramatic monologue."
+          ],
+          meta: ["College of Liberal Arts"]
+        },
+        {
+          time: "Following the program",
+          title: "Reception and Student Music",
+          description: [
+            "Continue the conversation with music, refreshments, and an informal gathering with convening participants and guests."
+          ],
+          meta: ["College of Liberal Arts"]
+        },
+        {
+          time: "7:30 p.m.",
+          title: "Program Concludes",
+          description: [
+            "The public program comes to a close for the evening."
           ],
           meta: ["College of Liberal Arts"]
         }
@@ -248,7 +242,7 @@ const siteData = {
         subtitle: "A Craft Talk with John Jennings",
         paragraphs: [
           "At Planet Deep South, John Jennings will present an illustrated craft talk on comics, visual storytelling, adaptation, speculative design, and the Black Southern imagination.",
-          "The talk will be followed by a moderated conversation, audience questions, and a comic book signing."
+          "The talk leads into exhibition viewing and a public book signing before the afternoon and evening programs continue."
         ],
         topics: [
           "Comics and sequential storytelling",
@@ -325,11 +319,11 @@ const siteData = {
       ],
       featuredIn: [
         "The Build Your Tiger World showcase",
-        "The Writing the Image creative reading",
+        "The evening readings and performance program",
         "The John Jennings installation",
         "The College of Liberal Arts installation",
         "The futurist fashion presentation",
-        "The evening reception",
+        "Tiger Futures",
         "Digital displays and projections",
         "The Planet Deep South website",
         "Event social media and documentation"
@@ -397,8 +391,8 @@ const siteData = {
           eyebrow: "2026 Program",
           title: "Planet Deep South 2026",
           paragraphs: [
-            "The 2026 program returns Planet Deep South to Jackson as a focused one-day gathering centered on John Jennings and his artwork.",
-            "The 2026 event brings together panels, creative readings, a John Jennings installation, an artist craft talk, a comic book signing, and an evening reception."
+            "The 2026 convening brings Planet Deep South back to Jackson for a focused day of art, scholarship, exchange, and evening performance.",
+            "The program includes opening remarks, a craft talk with John Jennings, exhibition viewing, a luncheon conversation, a scholarly roundtable, Tiger Futures, readings, performance, and a closing reception with music."
           ]
         },
         {
@@ -433,12 +427,13 @@ const siteData = {
         },
         {
           id: "admission",
-          eyebrow: "Admission",
-          title: "Free to Attend",
+          eyebrow: "Registration",
+          title: "Register to Attend",
           paragraphs: [
-            "Planet Deep South is free.",
-            "Advance registration may be requested for selected programs, including the John Jennings craft talk and evening reception."
-          ]
+            "Planet Deep South is free and open to attendees.",
+            "Use the registration form below to sign up for the convening."
+          ],
+          registrationEmbed: true
         },
         {
           id: "visit-details",
@@ -452,11 +447,11 @@ const siteData = {
         },
         {
           id: "reception",
-          eyebrow: "Evening Reception",
+          eyebrow: "Evening Program",
           title: "Tiger Futures",
           paragraphs: [
-            "The Tiger Futures reception is planned as an outdoor courtyard gathering with an indoor backup location available in the event of inclement weather.",
-            "Daytime programs are casual. Guests attending the reception are welcome to wear creative, futuristic, artistic, or Black Southern-inspired attire, but themed dress is not required."
+            "Tiger Futures opens the evening portion of Planet Deep South with student-centered creative work, followed by readings, performance, and an informal reception with music.",
+            "Guests are welcome to arrive for the full day or join the evening program, and creative attire is welcome but not required."
           ]
         }
       ]

@@ -936,6 +936,20 @@ section[id] {
   color: #0b2f5f;
 }
 
+.registration-embed {
+  margin-top: 1.4rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.registration-embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
 @media (max-width: 1180px) {
   body::after {
     background-size:
