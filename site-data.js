@@ -135,10 +135,6 @@ const siteData = {
           body: "Opening remarks, the craft talk, book signing, exhibition viewing, and the scholarly roundtable take place in College of Liberal Arts Room 166."
         },
         {
-          title: "Luncheon Conversation",
-          body: "The invitation-only luncheon conversation takes place in the Student Center."
-        },
-        {
           title: "Evening Program",
           body: "Tiger Futures, readings, performance, and the reception with music take place in the Johnson Hall Art Gallery."
         }
