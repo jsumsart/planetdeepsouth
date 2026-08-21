@@ -289,12 +289,12 @@ const siteData = {
         eyebrow: "Call for Submissions",
         title: "Planet Deep South 2026 Submissions",
         intro:
-          "Planet Deep South invites current Jackson State University students to submit speculative creative work engaging the future of Jackson, the Black South, and Black worldmaking."
+          "Planet Deep South invites current Jackson State University students to imagine the future through creative work rooted in JSU, Jackson, and the wider Black South."
       },
       prompt: [
-        "We are seeking original submissions from current Jackson State University students that engage Black speculative futures, Southern worldbuilding, cultural memory, and imaginative possibility.",
-        "Submissions may respond to Planet Deep South through visual art, multimedia work, or written work that could be shared, staged, or performed during the evening program.",
-        "We welcome work that is thoughtful, imaginative, and clearly connected to the themes of Planet Deep South."
+        "This call asks current Jackson State University students to imagine the future and the future of what it means to be a JSU student.",
+        "What might Jackson State look, sound, or feel like years from now? What traditions, struggles, dreams, styles, communities, and ways of learning will shape that future?",
+        "Submissions may take the form of visual art, multimedia work, or written work that can be shared, staged, or performed during the evening reception program."
       ],
       forms: [
         {
@@ -310,7 +310,7 @@ const siteData = {
       ],
       guidelines: [
         "This call is open to current Jackson State University students only.",
-        "Work should connect in some way to Black speculative futures, Southern imagination, cultural memory, or future-facing storytelling.",
+        "Work should connect in some way to the future of Jackson State, student life, Black speculative futures, Southern imagination, cultural memory, or future-facing storytelling.",
         "Submissions may be complete works, excerpts, proposals, or works in progress.",
         "Written submissions should be suitable for a live reading or short performance.",
         "Multimedia submissions should include any relevant display, installation, or technical notes."
@@ -336,6 +336,7 @@ const siteData = {
       },
       notes: [
         "Individual and collaborative submissions by current Jackson State University students are welcome.",
+        "You do not need to have a finished piece to submit; strong concepts, drafts, and works in progress are welcome.",
         "Questions about submissions may be directed to the Planet Deep South organizing team at theeadhlab@gmail.com."
       ],
       review: [
