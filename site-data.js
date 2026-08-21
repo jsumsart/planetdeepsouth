@@ -80,6 +80,10 @@ const siteData = {
         shortIntro:
           "Join a full day of conversation, exhibition viewing, scholarly exchange, and evening performance anchored by John Jennings and the wider Planet Deep South community.",
         primaryButton: { label: "View the Schedule", href: "schedule.html" },
+        signupButton: {
+          label: "Sign Up",
+          href: "https://form.jotform.com/262326200071139"
+        },
         secondaryButton: { label: "Explore John Jennings", href: "john-jennings.html" },
         tertiaryLink: null,
         chips: []

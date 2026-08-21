@@ -140,6 +140,7 @@ function renderHome() {
         <p>${page.hero.shortIntro}</p>
         <div class="button-row">
           <a class="button button-primary" href="${page.hero.primaryButton.href}">${page.hero.primaryButton.label}</a>
+          <a class="button button-secondary" href="${page.hero.signupButton.href}" target="_blank" rel="noreferrer">${page.hero.signupButton.label}</a>
           <a class="button button-secondary" href="${page.hero.secondaryButton.href}">${page.hero.secondaryButton.label}</a>
         </div>
       </section>
