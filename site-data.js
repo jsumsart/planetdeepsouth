@@ -22,7 +22,7 @@ const siteData = {
       { label: "Schedule", href: "schedule.html", page: "schedule" },
       { label: "John Jennings", href: "john-jennings.html", page: "john-jennings" },
       {
-        label: "Build Your Tiger World",
+        label: "Call for Submissions",
         href: "build-your-tiger-world.html",
         page: "build-your-tiger-world"
       },
@@ -91,7 +91,7 @@ const siteData = {
             "Scholars and invited guests connect research, creative practice, and the broader questions at the center of Planet Deep South."
         },
         {
-          title: "Build Your Tiger World",
+          title: "Call for Submissions",
           body:
             "Participants across visual art, writing, fashion, music, theatre, comics, and interdisciplinary media present speculative work shaped by Black Southern futures."
         },
@@ -122,9 +122,23 @@ const siteData = {
         eyebrow: "Planet Deep South 2026",
         title: "Schedule",
         intro:
-          "Planet Deep South 2026 unfolds across a full day of conversation, exhibition viewing, scholarly exchange, and evening performance.",
+          "A full day moving from welcome and craft talk to scholarly exchange, then into Tiger Futures, readings, and the evening reception.",
         note: "Schedule subject to change."
       },
+      overview: [
+        {
+          title: "Talks and Day Program",
+          body: "Opening remarks, the craft talk, book signing, exhibition viewing, and the scholarly roundtable take place in College of Liberal Arts Room 166."
+        },
+        {
+          title: "Luncheon Conversation",
+          body: "The invitation-only luncheon conversation takes place in the Student Center."
+        },
+        {
+          title: "Evening Program",
+          body: "Tiger Futures, readings, performance, and the reception with music take place in the Johnson Hall Art Gallery."
+        }
+      ],
       items: [
         {
           time: "10:00 a.m.",
@@ -132,7 +146,7 @@ const siteData = {
           description: [
             "An introduction to Planet Deep South, the ideas shaping the convening, and the day’s program."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "College of Liberal Arts, Room 166"
         },
         {
           time: "11:00 a.m.",
@@ -140,7 +154,8 @@ const siteData = {
           description: [
             "Artist, scholar, and writer John Jennings discusses his creative practice, storytelling, and the ideas that inform his work."
           ],
-          meta: ["Featured speaker: John Jennings", "College of Liberal Arts"]
+          location: "College of Liberal Arts, Room 166",
+          meta: ["Featured speaker: John Jennings"]
         },
         {
           time: "12:00 p.m.",
@@ -148,7 +163,7 @@ const siteData = {
           description: [
             "Meet John Jennings during a book signing and spend time exploring the accompanying exhibition."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "College of Liberal Arts, Room 166"
         },
         {
           time: "1:00-2:30 p.m.",
@@ -156,7 +171,7 @@ const siteData = {
           description: [
             "A break in public programming for attendees to enjoy lunch on their own and explore nearby dining options."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "Lunch on your own"
         },
         {
           time: "1:30-2:30 p.m.",
@@ -165,7 +180,8 @@ const siteData = {
           description: [
             "An intimate facilitated conversation bringing invited participants together for deeper discussion around the themes of Planet Deep South."
           ],
-          meta: ["By invitation", "College of Liberal Arts"]
+          location: "Student Center",
+          meta: ["By invitation"]
         },
         {
           time: "3:00-3:50 p.m.",
@@ -173,7 +189,7 @@ const siteData = {
           description: [
             "Scholars and invited guests come together for a focused discussion connecting research, creative practice, and the broader questions explored throughout the convening."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "College of Liberal Arts, Room 166"
         },
         {
           time: "3:50-5:30 p.m.",
@@ -181,7 +197,7 @@ const siteData = {
           description: [
             "A pause between the daytime convening and the evening program."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "Break between venues"
         },
         {
           time: "5:30 p.m.",
@@ -189,7 +205,7 @@ const siteData = {
           description: [
             "Guests are invited to arrive and gather ahead of the evening program."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "Johnson Hall Art Gallery"
         },
         {
           time: "6:00 p.m.",
@@ -197,7 +213,7 @@ const siteData = {
           description: [
             "An interdisciplinary evening program highlighting student creativity and imagining possible futures through art, fashion, performance, and storytelling."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "Johnson Hall Art Gallery"
         },
         {
           time: "6:30 p.m.",
@@ -205,7 +221,7 @@ const siteData = {
           description: [
             "An evening presentation featuring literary and performative work, including readings and a dramatic monologue."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "Johnson Hall Art Gallery"
         },
         {
           time: "Following the program",
@@ -213,7 +229,7 @@ const siteData = {
           description: [
             "Continue the conversation with music, refreshments, and an informal gathering with convening participants and guests."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "Johnson Hall Art Gallery"
         },
         {
           time: "7:30 p.m.",
@@ -221,7 +237,7 @@ const siteData = {
           description: [
             "The public program comes to a close for the evening."
           ],
-          meta: ["College of Liberal Arts"]
+          location: "Johnson Hall Art Gallery"
         }
       ]
     },
@@ -270,87 +286,65 @@ const siteData = {
     },
     "build-your-tiger-world": {
       pageHeader: {
-        eyebrow: "Student Participation",
-        title: "Build Your Tiger World",
+        eyebrow: "Call for Submissions",
+        title: "Planet Deep South 2026 Submissions",
         intro:
-          "Participants are invited to imagine the future of Jackson, Mississippi, and the Black South through speculative creative work."
+          "Planet Deep South invites submissions of speculative creative work engaging the future of Jackson, the Black South, and Black worldmaking."
       },
       prompt: [
-        "Imagine Jackson State University and the Black South fifty years from now.",
-        "What has survived? What has changed? What forms of knowledge, memory, culture, technology, ritual, style, sound, and community have been protected or transformed? What challenges does this future face?",
-        "Students may create a person, place, object, garment, sound, story, environment, performance, institution, technology, or cultural practice from this imagined future."
+        "We are seeking original submissions that engage Black speculative futures, Southern worldbuilding, cultural memory, and imaginative possibility.",
+        "Submissions may respond to Planet Deep South through visual art, multimedia work, or written work that could be shared, staged, or performed during the evening program.",
+        "We welcome work that is thoughtful, imaginative, and clearly connected to the themes of Planet Deep South."
       ],
       forms: [
         {
-          title: "Visual Art",
+          title: "Artworks and Multimedia",
           body:
-            "Create a character, environment, artifact, comic page, poster, illustration, sculpture, animation, or visual design from an imagined future."
+            "Submit visual art, digital work, comics, illustration, collage, photography, installation concepts, moving-image work, sound-based work, or other multimedia projects connected to Black speculative futures."
         },
         {
-          title: "Creative Writing",
+          title: "Written Work for Performance",
           body:
-            "Write a poem, short speculative story, dramatic monologue, manifesto, letter, or message from the future."
-        },
-        {
-          title: "Fashion Design",
-          body:
-            "Develop a garment, wearable artwork, styled ensemble, textile concept, accessory, or fashion illustration for a person or community in the imagined world."
-        },
-        {
-          title: "Music and Sound",
-          body:
-            "Create a short soundscape, composition, song, spoken-word work, or audio environment combining speculative ideas with Southern musical traditions."
-        },
-        {
-          title: "Theatre and Performance",
-          body:
-            "Develop a monologue, short scene, movement work, or performance featuring a person living within the imagined world."
-        },
-        {
-          title: "Comics and Illustration",
-          body:
-            "Create a character sheet, comic page, visual sequence, cover, or short graphic narrative."
-        },
-        {
-          title: "Digital and Interdisciplinary Media",
-          body:
-            "Develop a digital environment, projection, interactive work, video, animation, map, archive, or project combining multiple disciplines."
+            "Submit poetry, short prose, speculative scenes, dramatic monologues, spoken-word pieces, or other written work that could be performed or read during the evening reception program."
         }
       ],
-      featuredIn: [
-        "The Build Your Tiger World showcase",
-        "The evening readings and performance program",
-        "The John Jennings installation",
-        "The College of Liberal Arts installation",
-        "The futurist fashion presentation",
-        "Tiger Futures",
-        "Digital displays and projections",
-        "The Planet Deep South website",
-        "Event social media and documentation"
+      guidelines: [
+        "Work should connect in some way to Black speculative futures, Southern imagination, cultural memory, or future-facing storytelling.",
+        "Submissions may be complete works, excerpts, proposals, or works in progress.",
+        "Written submissions should be suitable for a live reading or short performance.",
+        "Multimedia submissions should include any relevant display, installation, or technical notes."
       ],
-      eligibility: [
-        "Individual and collaborative projects are welcome.",
-        "Student work, class-based projects, and independent submissions may all be considered.",
-        "Faculty may also incorporate the prompt into existing classes, workshops, assignments, or studio projects."
+      presentation: [
+        "Selected visual and multimedia work may be displayed during Planet Deep South or featured in related documentation and promotional materials.",
+        "Selected written work may be invited into the evening readings and performance program connected to Tiger Futures.",
+        "Final presentation format will depend on space, time, and technical feasibility."
       ],
       submissionItems: [
         "Name",
-        "Major or academic program",
-        "Classification",
         "Email address",
         "Project title",
-        "Creative category",
-        "Short description",
-        "File, image, text, video, audio, or project documentation",
-        "Any technical or installation needs"
+        "Submission category",
+        "Short artist or writer statement",
+        "Brief description of the work",
+        "File upload, sample, or documentation",
+        "Technical or installation needs, if applicable"
       ],
-      selection: [
-        "A small review group will select student work based on relevance to the theme, clarity of concept, creativity, and suitability for the available presentation format.",
-        "Strong concepts, drafts, design proposals, and works in progress may also be considered."
+      submit: {
+        label: "Submit Your Work",
+        href: "https://form.jotform.com/262326471510046"
+      },
+      notes: [
+        "Individual and collaborative submissions are welcome.",
+        "Questions about submissions may be directed to the Planet Deep South organizing team at theeadhlab@gmail.com."
       ],
-      faculty: [
-        "Faculty are encouraged to use Build Your Tiger World as a short classroom prompt, creative exercise, discussion activity, or component of an existing assignment.",
-        "Faculty interested in participating should contact the Planet Deep South organizing team."
+      review: [
+        "Submissions will be reviewed for thematic fit, clarity, creative strength, and feasibility within the event format.",
+        "A smaller number of selected works will be invited for presentation as part of Planet Deep South 2026."
+      ],
+      contactItems: [
+        "Email address",
+        "Project title",
+        "Submission materials or work sample"
       ]
     },
     about: {
@@ -422,7 +416,7 @@ const siteData = {
           paragraphs: [
             "Wednesday, September 30, 2026",
             "College of Liberal Arts, Jackson State University, 1400 John R. Lynch Street, Jackson, Mississippi 39217",
-            "All public programs for Planet Deep South 2026 will take place in the College of Liberal Arts."
+            "Talks, the craft talk, exhibition viewing, and the scholarly roundtable take place in College of Liberal Arts Room 166. The luncheon conversation takes place in the Student Center. The evening program and reception take place in the Johnson Hall Art Gallery."
           ]
         },
         {
@@ -450,7 +444,7 @@ const siteData = {
           eyebrow: "Evening Program",
           title: "Tiger Futures",
           paragraphs: [
-            "Tiger Futures opens the evening portion of Planet Deep South with student-centered creative work, followed by readings, performance, and an informal reception with music.",
+            "Tiger Futures opens the evening portion of Planet Deep South in the Johnson Hall Art Gallery with student-centered creative work, followed by readings, performance, and an informal reception with music.",
             "Guests are welcome to arrive for the full day or join the evening program, and creative attire is welcome but not required."
           ]
         }

@@ -103,6 +103,24 @@ function renderPageHeader(data) {
   `;
 }
 
+function renderRegistrationEmbed() {
+  return `
+    <div class="registration-embed">
+      <iframe
+        id="JotFormIFrame-262326200071139"
+        title="Sign Up for Planet Deep South!"
+        onload="window.parent.scrollTo(0,0)"
+        allowtransparency="true"
+        allow="geolocation; microphone; camera; fullscreen; payment"
+        src="https://form.jotform.com/262326200071139"
+        frameborder="0"
+        style="min-width:100%;max-width:100%;height:539px;border:none;"
+        scrolling="no"
+      ></iframe>
+    </div>
+  `;
+}
+
 function renderHome() {
   const { site, shared, pages } = siteData;
   const page = pages.home;
@@ -134,7 +152,7 @@ function renderHome() {
           <h2>${shared.eventOverview.title}</h2>
         </div>
         <aside class="pull-quote">
-          <p>Planet Deep South returns to Jackson as a focused gathering rooted in scholarship, art, performance, and Black speculative futures.</p>
+          <p>Planet Deep South gathers artists, scholars, students, and community audiences around Black speculative futures in the American South.</p>
         </aside>
       </div>
       <div class="editorial-columns editorial-columns-single">
@@ -166,7 +184,7 @@ function renderHome() {
           <p>The program will explore the relationship between Black visual culture and future-making, as well as the role of artists, writers, and educators in imagining worlds beyond the present.</p>
           <div class="detail-pair">
             <strong>${site.date}</strong>
-            <span>11:00 a.m. · College of Liberal Arts</span>
+            <span>11:00 a.m. · College of Liberal Arts, Room 166</span>
           </div>
         </article>
       </div>
@@ -191,14 +209,23 @@ function renderHome() {
       </div>
     </section>
 
+    <section class="content-section">
+      <article class="section-prose section-frame registration-feature">
+        <p class="eyebrow">Registration</p>
+        <h2>Register for Planet Deep South 2026</h2>
+        <p class="lede-small">Reserve your place for a full day of talks, exhibition viewing, scholarly exchange, Tiger Futures, readings, and the evening reception.</p>
+        ${renderRegistrationEmbed()}
+      </article>
+    </section>
+
     <section class="content-section closing-banner">
       <div>
-        <p class="eyebrow">Join Us at Planet Deep South</p>
+        <p class="eyebrow">Attend and Participate</p>
         <h2>Spend the day exploring art, scholarship, creative practice, and the future of the Black South.</h2>
       </div>
       <div class="button-row">
         <a class="button button-primary" href="schedule.html">View the Schedule</a>
-        <a class="button button-secondary" href="build-your-tiger-world.html">Student Participation</a>
+        <a class="button button-secondary" href="build-your-tiger-world.html">Call for Submissions</a>
       </div>
     </section>
   `;
@@ -209,6 +236,21 @@ function renderSchedule() {
   return `
     ${renderPageHeader(page.pageHeader)}
     <section class="content-section">
+      <div class="card-grid card-grid-three schedule-overview">
+        ${page.overview
+          .map(
+            (item) => `
+              <article class="info-card schedule-overview-card">
+                <p class="eyebrow">Program Flow</p>
+                <h3>${item.title}</h3>
+                <p>${item.body}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+    <section class="content-section">
       <div class="timeline">
         ${page.items
           .map(
@@ -218,9 +260,10 @@ function renderSchedule() {
                 <div class="timeline-body">
                   <h3>${item.title}</h3>
                   ${item.subheading ? `<p class="detail-kicker">${item.subheading}</p>` : ""}
+                  ${item.location ? `<p class="schedule-location">${item.location}</p>` : ""}
                   ${paragraphBlock(item.description)}
                   ${item.bullets ? `<ul>${listBlock(item.bullets)}</ul>` : ""}
-                  <ul class="meta-list">${listBlock(item.meta)}</ul>
+                  ${item.meta ? `<ul class="meta-list">${listBlock(item.meta)}</ul>` : ""}
                 </div>
               </article>
             `
@@ -264,7 +307,7 @@ function renderJohnJennings() {
           ${paragraphBlock(page.program.paragraphs)}
           <div class="detail-pair">
             <strong>${siteData.site.date}</strong>
-            <span>11:00 a.m. · College of Liberal Arts</span>
+            <span>11:00 a.m. · College of Liberal Arts, Room 166</span>
           </div>
           <a class="button button-primary" href="schedule.html">View the Full Schedule</a>
         </article>
@@ -292,22 +335,25 @@ function renderBuildYourTigerWorld() {
     <section class="content-section feature-band">
       <div class="feature-grid">
         <article class="section-prose section-frame">
-          <p class="eyebrow">The Prompt</p>
-          <h2>What Kind of World Will Tigers Build?</h2>
+          <p class="eyebrow">Submission Opportunity</p>
+          <h2>Submit Work to Planet Deep South 2026</h2>
           ${paragraphBlock(page.prompt)}
+          <div class="button-row">
+            <a class="button button-primary" href="${page.submit.href}" target="_blank" rel="noreferrer">${page.submit.label}</a>
+          </div>
         </article>
         <article class="list-panel">
-          <p class="eyebrow">Selected Work May Be Featured In</p>
-          <ul>${listBlock(page.featuredIn)}</ul>
+          <p class="eyebrow">Submission Guidelines</p>
+          <ul>${listBlock(page.guidelines)}</ul>
         </article>
       </div>
     </section>
     <section class="content-section">
       <div class="section-heading">
-        <p class="eyebrow">Choose Your Form</p>
-        <h2>Worldbuilding Across Media</h2>
+        <p class="eyebrow">Submission Categories</p>
+        <h2>Eligible Work</h2>
       </div>
-      <div class="card-grid card-grid-three">
+      <div class="card-grid card-grid-two">
         ${page.forms
           .map(
             (item) => `
@@ -321,26 +367,21 @@ function renderBuildYourTigerWorld() {
       </div>
     </section>
     <section class="content-section card-grid card-grid-two">
-      <article class="list-panel">
-        <p class="eyebrow">Eligibility</p>
-        <ul>${listBlock(page.eligibility)}</ul>
-      </article>
-      <article class="list-panel">
+      <article class="section-prose section-frame">
         <p class="eyebrow">How to Submit</p>
+        <h2>Include the Following</h2>
         <ul>${listBlock(page.submissionItems)}</ul>
-        <p class="microcopy">Submission deadline and form link to be announced.</p>
-      </article>
-    </section>
-    <section class="content-section feature-grid">
-      <article class="section-prose section-frame">
-        <p class="eyebrow">Selection Process</p>
-        <h2>Concepts, Drafts, and Works in Progress Welcome</h2>
-        ${paragraphBlock(page.selection)}
+        ${paragraphBlock(page.notes)}
+        <div class="button-row">
+          <a class="button button-primary" href="${page.submit.href}" target="_blank" rel="noreferrer">${page.submit.label}</a>
+        </div>
       </article>
       <article class="section-prose section-frame">
-        <p class="eyebrow">For Faculty</p>
-        <h2>Bring the Prompt into the Classroom</h2>
-        ${paragraphBlock(page.faculty)}
+        <p class="eyebrow">Review and Presentation</p>
+        <h2>Review Process and Presentation</h2>
+        ${paragraphBlock(page.review)}
+        <p class="detail-kicker">Selected work may appear in the event exhibition, evening program, or related event documentation.</p>
+        <ul>${listBlock(page.presentation)}</ul>
       </article>
     </section>
   `;
@@ -348,10 +389,39 @@ function renderBuildYourTigerWorld() {
 
 function renderAbout() {
   const page = siteData.pages.about;
+  const locationSection = page.sections.find((section) => section.id === "location");
+  const registrationSection = page.sections.find((section) => section.id === "admission");
+  const remainingSections = page.sections.filter(
+    (section) => section.id !== "location" && section.id !== "admission"
+  );
   return `
     ${renderPageHeader(page.pageHeader)}
+    <section class="content-section">
+      <article class="section-prose section-frame about-combined-card">
+        <div class="about-combined-header">
+          <div>
+            <p class="eyebrow">${locationSection.eyebrow}</p>
+            <h2>${locationSection.title}</h2>
+          </div>
+          <div>
+            <p class="eyebrow">${registrationSection.eyebrow}</p>
+            <h2>${registrationSection.title}</h2>
+          </div>
+        </div>
+        <div class="about-combined-grid">
+          <div class="about-combined-copy">
+            ${paragraphBlock(locationSection.paragraphs)}
+            <p>${registrationSection.paragraphs[0]}</p>
+            <p>${registrationSection.paragraphs[1]}</p>
+          </div>
+          <div>
+            ${renderRegistrationEmbed()}
+          </div>
+        </div>
+      </article>
+    </section>
     <section class="content-section card-grid card-grid-two">
-      ${page.sections
+      ${remainingSections
         .map(
           (section) => `
             <article class="section-prose section-frame" id="${section.id}">
@@ -359,25 +429,6 @@ function renderAbout() {
               <h2>${section.title}</h2>
               ${paragraphBlock(section.paragraphs)}
               ${section.bullets ? `<ul>${listBlock(section.bullets)}</ul>` : ""}
-              ${
-                section.registrationEmbed
-                  ? `
-                    <div class="registration-embed">
-                      <iframe
-                        id="JotFormIFrame-262326200071139"
-                        title="Sign Up for Planet Deep South!"
-                        onload="window.parent.scrollTo(0,0)"
-                        allowtransparency="true"
-                        allow="geolocation; microphone; camera; fullscreen; payment"
-                        src="https://form.jotform.com/262326200071139"
-                        frameborder="0"
-                        style="min-width:100%;max-width:100%;height:539px;border:none;"
-                        scrolling="no"
-                      ></iframe>
-                    </div>
-                  `
-                  : ""
-              }
             </article>
           `
         )
