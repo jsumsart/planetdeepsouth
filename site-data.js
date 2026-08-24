@@ -300,22 +300,27 @@ const siteData = {
         {
           title: "Artworks and Multimedia",
           body:
-            "Submit visual art, digital work, comics, illustration, collage, photography, installation concepts, moving-image work, sound-based work, or other multimedia projects connected to Black speculative futures."
+            "Submit visual art, digital work, comics, illustration, collage, photography, installation concepts, moving-image work, sound-based work, or other multimedia projects connected to Black speculative futures. Students may submit up to 5 visual or multimedia works."
         },
         {
           title: "Written Work for Performance",
           body:
-            "Submit poetry, short prose, speculative scenes, dramatic monologues, spoken-word pieces, or other written work that could be performed or read during the evening reception program."
+            "Submit poetry, short prose, speculative scenes, dramatic monologues, spoken-word pieces, or other written work that could be performed or read during the evening reception program. Students may submit up to 3 written works."
         }
       ],
       guidelines: [
         "This call is open to current Jackson State University students only.",
         "Work should connect in some way to the future of Jackson State, student life, Black speculative futures, Southern imagination, cultural memory, or future-facing storytelling.",
+        "Students may submit up to 5 visual or multimedia works.",
+        "Students may submit up to 3 written works.",
+        "Visual submissions may include up to 5 images and up to 3 media files.",
+        "Time-based media should not exceed 5 minutes in length.",
         "Visual and multimedia submissions are due by Friday, September 18, 2026.",
         "Written submissions are due by Monday, September 21, 2026.",
         "Physical works must be dropped off in the gallery on Monday, September 21, 2026.",
-        "Submissions may be complete works, excerpts, proposals, or works in progress.",
-        "Written submissions should be suitable for a live reading or short performance.",
+        "Submissions must be complete works ready for review.",
+        "Poetry submissions may include up to 3 poems.",
+        "Prose, scripts, and monologues should not exceed 2,000 words.",
         "Multimedia submissions should include any relevant display, installation, or technical notes."
       ],
       presentation: [
@@ -330,7 +335,7 @@ const siteData = {
         "Submission category",
         "Short artist or writer statement",
         "Brief description of the work",
-        "File upload, sample, or documentation",
+        "File upload, sample, image set, or documentation",
         "Technical or installation needs, if applicable"
       ],
       submit: {
@@ -339,7 +344,8 @@ const siteData = {
       },
       notes: [
         "Individual and collaborative submissions by current Jackson State University students are welcome.",
-        "You do not need to have a finished piece to submit; strong concepts, drafts, and works in progress are welcome.",
+        "Please submit complete works that are ready for review.",
+        "Please keep image sets, media uploads, and written work within the stated limits so submissions can be reviewed fairly.",
         "Please plan around the separate submission deadlines for visual and written work, and note that physical works must be delivered on Monday, September 21, 2026.",
         "Questions about submissions may be directed to the Planet Deep South organizing team at theeadhlab@gmail.com."
       ],
