@@ -311,6 +311,9 @@ const siteData = {
       guidelines: [
         "This call is open to current Jackson State University students only.",
         "Work should connect in some way to the future of Jackson State, student life, Black speculative futures, Southern imagination, cultural memory, or future-facing storytelling.",
+        "Visual and multimedia submissions are due by Friday, September 18, 2026.",
+        "Written submissions are due by Monday, September 21, 2026.",
+        "Physical works must be dropped off in the gallery on Monday, September 21, 2026.",
         "Submissions may be complete works, excerpts, proposals, or works in progress.",
         "Written submissions should be suitable for a live reading or short performance.",
         "Multimedia submissions should include any relevant display, installation, or technical notes."
@@ -337,6 +340,7 @@ const siteData = {
       notes: [
         "Individual and collaborative submissions by current Jackson State University students are welcome.",
         "You do not need to have a finished piece to submit; strong concepts, drafts, and works in progress are welcome.",
+        "Please plan around the separate submission deadlines for visual and written work, and note that physical works must be delivered on Monday, September 21, 2026.",
         "Questions about submissions may be directed to the Planet Deep South organizing team at theeadhlab@gmail.com."
       ],
       review: [
