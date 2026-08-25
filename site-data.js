@@ -301,27 +301,34 @@ const siteData = {
           title: "Artworks and Multimedia",
           body:
             "Submit visual art, digital work, comics, illustration, collage, photography, installation concepts, moving-image work, sound-based work, or other multimedia projects connected to Black speculative futures. Students may submit up to 5 visual or multimedia works."
+          ,
+          details: [
+            "You may submit up to 5 visual or multimedia works.",
+            "Visual submissions may include up to 5 images and up to 3 media files.",
+            "Time-based media should not exceed 5 minutes in length.",
+            "Multimedia submissions should include any relevant display, installation, or technical notes."
+          ]
         },
         {
           title: "Written Work for Performance",
           body:
             "Submit poetry, short prose, speculative scenes, dramatic monologues, spoken-word pieces, or other written work that could be performed or read during the evening reception program. Students may submit up to 3 written works."
+          ,
+          details: [
+            "You may submit up to 3 written works.",
+            "Poetry submissions may include up to 3 poems.",
+            "Prose, scripts, and monologues should not exceed 2,000 words."
+          ]
         }
       ],
       guidelines: [
         "This call is open to current Jackson State University students only.",
         "Work should connect in some way to the future of Jackson State, student life, Black speculative futures, Southern imagination, cultural memory, or future-facing storytelling.",
-        "Students may submit up to 5 visual or multimedia works.",
-        "Students may submit up to 3 written works.",
-        "Visual submissions may include up to 5 images and up to 3 media files.",
-        "Time-based media should not exceed 5 minutes in length.",
         "Visual and multimedia submissions are due by Friday, September 18, 2026.",
         "Written submissions are due by Monday, September 21, 2026.",
         "Physical works must be dropped off in the gallery on Monday, September 21, 2026.",
         "Submissions must be complete works ready for review.",
-        "Poetry submissions may include up to 3 poems.",
-        "Prose, scripts, and monologues should not exceed 2,000 words.",
-        "Multimedia submissions should include any relevant display, installation, or technical notes."
+        "Please review the category-specific requirements below before submitting."
       ],
       presentation: [
         "Accepted visual and multimedia work may be displayed during Planet Deep South and may be presented or featured during the evening reception program.",

@@ -361,6 +361,7 @@ function renderBuildYourTigerWorld() {
               <article class="info-card">
                 <h3>${item.title}</h3>
                 <p>${item.body}</p>
+                ${item.details ? `<ul>${listBlock(item.details)}</ul>` : ""}
               </article>
             `
           )
