@@ -49,7 +49,7 @@ const siteData = {
       intro:
         "The 2026 Planet Deep South Pop Up explores the intersections of Black speculative culture, HBCU creativity, visual storytelling, literature, fashion, music, theatre, and the future of the American South.",
       paragraphs: [
-        "The day will move from opening remarks into a craft talk with John Jennings, exhibition viewing, a luncheon conversation, a scholarly roundtable, and an evening program shaped by student creativity, readings, performance, and gathering.",
+        "The day will move from opening remarks into a craft talk with John Jennings, exhibition viewing, a scholarly roundtable, and an evening program shaped by student creativity, readings, performance, and gathering.",
         "The program welcomes scholars, artists, students, educators, alumni, and community guests into a shared conversation about Black speculative futures."
       ]
     },
@@ -126,7 +126,7 @@ const siteData = {
         eyebrow: "The 2026 Planet Deep South Pop Up",
         title: "Schedule",
         intro:
-          "A full day moving from welcome and craft talk to scholarly exchange, then into Tiger Futures, readings, and the evening reception.",
+          "A full day moving from welcome and craft talk to scholarly exchange, then into Tiger Futures and the evening reception.",
         note: "Schedule subject to change."
       },
       overview: [
@@ -136,7 +136,7 @@ const siteData = {
         },
         {
           title: "Evening Program",
-          body: "Tiger Futures, readings, performance, and the reception with music take place in the Johnson Hall Art Gallery."
+          body: "Tiger Futures is the full evening reception program in the Johnson Hall Art Gallery, bringing together readings, conversation, refreshments, art viewing, fashion, and music."
         }
       ],
       items: [
@@ -190,42 +190,11 @@ const siteData = {
           location: "Break between venues"
         },
         {
-          time: "5:30 p.m.",
-          title: "Doors Open for Tiger Futures",
+          time: "6:00-7:30 p.m.",
+          title: "Tiger Futures Reception",
           description: [
-            "Guests are invited to arrive and gather ahead of the evening program."
-          ],
-          location: "Johnson Hall Art Gallery"
-        },
-        {
-          time: "6:00 p.m.",
-          title: "Tiger Futures",
-          description: [
-            "An interdisciplinary evening program highlighting student creativity and imagining possible futures through art, fashion, performance, and storytelling."
-          ],
-          location: "Johnson Hall Art Gallery"
-        },
-        {
-          time: "6:30 p.m.",
-          title: "Readings and Performance",
-          description: [
-            "An evening presentation featuring literary and performative work, including readings and a dramatic monologue."
-          ],
-          location: "Johnson Hall Art Gallery"
-        },
-        {
-          time: "Following the program",
-          title: "Reception and Student Music",
-          description: [
-            "Continue the conversation with music, refreshments, and an informal gathering with convening participants and guests."
-          ],
-          location: "Johnson Hall Art Gallery"
-        },
-        {
-          time: "7:30 p.m.",
-          title: "Program Concludes",
-          description: [
-            "The public program comes to a close for the evening."
+            "Tiger Futures is the full evening reception program, bringing together readings, conversation with refreshments, art viewing, a fashion show, and music.",
+            "The reception highlights student creativity and invites guests into a shared space of performance, exchange, and Black Southern futurity."
           ],
           location: "Johnson Hall Art Gallery"
         }
@@ -395,7 +364,7 @@ const siteData = {
           title: "The 2026 Planet Deep South Pop Up",
           paragraphs: [
             "The 2026 Planet Deep South Pop Up returns to Jackson for a focused day of art, scholarship, exchange, and evening performance.",
-            "The program includes opening remarks, a craft talk with John Jennings, exhibition viewing, a luncheon conversation, a scholarly roundtable, Tiger Futures, readings, performance, and a closing reception with music."
+            "The program includes opening remarks, a craft talk with John Jennings, exhibition viewing, a scholarly roundtable, and Tiger Futures as an evening reception program with readings, conversation, art viewing, fashion, and music."
           ]
         },
         {
@@ -453,7 +422,7 @@ const siteData = {
           eyebrow: "Evening Program",
           title: "Tiger Futures",
           paragraphs: [
-            "Tiger Futures opens the evening portion of The 2026 Planet Deep South Pop Up in the Johnson Hall Art Gallery with student-centered creative work, followed by readings, performance, and an informal reception with music.",
+            "Tiger Futures is the evening reception program for The 2026 Planet Deep South Pop Up in the Johnson Hall Art Gallery, bringing together student-centered creative work, readings, conversation, refreshments, art viewing, fashion, and music.",
             "Guests are welcome to arrive for the full day or join the evening program, and creative attire is welcome but not required."
           ]
         }
