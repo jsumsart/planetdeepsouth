@@ -1,17 +1,17 @@
 const siteData = {
   site: {
-    title: "Planet Deep South 2026",
+    title: "The 2026 Planet Deep South Pop Up",
     subtitle: "Jackson State University",
     date: "Wednesday, September 30, 2026",
     venue: "College of Liberal Arts, Jackson State University",
     city: "Jackson, Mississippi",
     heroImage: "assets/pds-hero-hires.png",
     logoImage: "assets/pds-logo.png",
-    logoAlt: "Planet Deep South 2026 logo.",
+    logoAlt: "The 2026 Planet Deep South Pop Up logo.",
     johnJenningsImage: "assets/john-jennings.jpg",
     johnJenningsAlt: "Portrait of John Jennings.",
     heroAlt:
-      "Planet Deep South artwork featuring vibrant afrofuturist collage elements and Mississippi cartographic imagery.",
+      "The 2026 Planet Deep South Pop Up artwork featuring vibrant afrofuturist collage elements and Mississippi cartographic imagery.",
     utilityLinks: [
       { label: "Jackson State University", href: "https://www.jsums.edu/" },
       { label: "College of Liberal Arts", href: "https://www.jsums.edu/liberalarts/" },
@@ -47,7 +47,7 @@ const siteData = {
     eventOverview: {
       title: "A Day of Black Southern Worldbuilding",
       intro:
-        "Planet Deep South 2026 explores the intersections of Black speculative culture, HBCU creativity, visual storytelling, literature, fashion, music, theatre, and the future of the American South.",
+        "The 2026 Planet Deep South Pop Up explores the intersections of Black speculative culture, HBCU creativity, visual storytelling, literature, fashion, music, theatre, and the future of the American South.",
       paragraphs: [
         "The day will move from opening remarks into a craft talk with John Jennings, exhibition viewing, a luncheon conversation, a scholarly roundtable, and an evening program shaped by student creativity, readings, performance, and gathering.",
         "The program welcomes scholars, artists, students, educators, alumni, and community guests into a shared conversation about Black speculative futures."
@@ -55,7 +55,7 @@ const siteData = {
     },
     artistShort: [
       "John Jennings is an award-winning artist, graphic novelist, designer, curator, scholar, and educator whose work explores Black speculative culture, comics, Afrofuturism, horror, visual storytelling, and the politics of representation.",
-      "At Planet Deep South, Jennings will present an illustrated craft talk on comics, adaptation, worldbuilding, design, and the Black Southern imagination."
+      "As part of The 2026 Planet Deep South Pop Up, Jennings will present an illustrated craft talk on comics, adaptation, worldbuilding, design, and the Black Southern imagination."
     ],
     collaborationAreas: [
       "Art",
@@ -74,11 +74,11 @@ const siteData = {
     home: {
       hero: {
         eyebrow: "Jackson State University",
-        title: "Planet Deep South 2026",
+        title: "The 2026 Planet Deep South Pop Up",
         summary:
           "A one-day convening bringing together art, scholarship, creative practice, and Black speculative futures.",
         shortIntro:
-          "Join a full day of conversation, exhibition viewing, scholarly exchange, and evening performance anchored by John Jennings and the wider Planet Deep South community.",
+          "Join a full day of conversation, exhibition viewing, scholarly exchange, and evening performance anchored by John Jennings and the wider community gathered through The 2026 Planet Deep South Pop Up.",
         primaryButton: { label: "View the Schedule", href: "schedule.html" },
         signupButton: {
           label: "Sign Up",
@@ -92,7 +92,7 @@ const siteData = {
         {
           title: "Scholarly Roundtable",
           body:
-            "Scholars and invited guests connect research, creative practice, and the broader questions at the center of Planet Deep South."
+            "Scholars and invited guests connect research, creative practice, and the broader questions at the center of The 2026 Planet Deep South Pop Up."
         },
         {
           title: "Call for Submissions",
@@ -123,7 +123,7 @@ const siteData = {
     },
     schedule: {
       pageHeader: {
-        eyebrow: "Planet Deep South 2026",
+        eyebrow: "The 2026 Planet Deep South Pop Up",
         title: "Schedule",
         intro:
           "A full day moving from welcome and craft talk to scholarly exchange, then into Tiger Futures, readings, and the evening reception.",
@@ -144,7 +144,7 @@ const siteData = {
           time: "10:00 a.m.",
           title: "Opening Remarks and Welcome",
           description: [
-            "An introduction to Planet Deep South, the ideas shaping the convening, and the day’s program."
+            "An introduction to The 2026 Planet Deep South Pop Up, the ideas shaping the convening, and the day’s program."
           ],
           location: "College of Liberal Arts, Room 166"
         },
@@ -178,7 +178,7 @@ const siteData = {
           title: "Luncheon Conversation",
           subheading: "By Invitation",
           description: [
-            "An intimate facilitated conversation bringing invited participants together for deeper discussion around the themes of Planet Deep South."
+            "An intimate facilitated conversation bringing invited participants together for deeper discussion around the themes of The 2026 Planet Deep South Pop Up."
           ],
           location: "Student Center",
           meta: ["By invitation"]
@@ -257,7 +257,7 @@ const siteData = {
         title: "Drawing the Future South",
         subtitle: "A Craft Talk with John Jennings",
         paragraphs: [
-          "At Planet Deep South, John Jennings will present an illustrated craft talk on comics, visual storytelling, adaptation, speculative design, and the Black Southern imagination.",
+          "As part of The 2026 Planet Deep South Pop Up, John Jennings will present an illustrated craft talk on comics, visual storytelling, adaptation, speculative design, and the Black Southern imagination.",
           "The talk leads into exhibition viewing and a public book signing before the afternoon and evening programs continue."
         ],
         topics: [
@@ -287,9 +287,9 @@ const siteData = {
     "build-your-tiger-world": {
       pageHeader: {
         eyebrow: "Call for Submissions",
-        title: "Planet Deep South 2026 Submissions",
+        title: "The 2026 Planet Deep South Pop Up Submissions",
         intro:
-          "Planet Deep South invites current Jackson State University students to imagine the future through creative work rooted in JSU, Jackson, and the wider Black South."
+          "The 2026 Planet Deep South Pop Up invites current Jackson State University students to imagine the future through creative work rooted in JSU, Jackson, and the wider Black South."
       },
       prompt: [
         "This call asks current Jackson State University students to imagine the future and the future of what it means to be a JSU student.",
@@ -331,7 +331,7 @@ const siteData = {
         "Please review the category-specific requirements below before submitting."
       ],
       presentation: [
-        "Accepted visual and multimedia work may be displayed during Planet Deep South and may be presented or featured during the evening reception program.",
+        "Accepted visual and multimedia work may be displayed during The 2026 Planet Deep South Pop Up and may be presented or featured during the evening reception program.",
         "Accepted written work may be invited into the evening readings, performance, or reception program connected to Tiger Futures.",
         "Final presentation format will depend on space, time, and technical feasibility."
       ],
@@ -354,11 +354,11 @@ const siteData = {
         "Please submit complete works that are ready for review.",
         "Please keep image sets, media uploads, and written work within the stated limits so submissions can be reviewed fairly.",
         "Please plan around the separate submission deadlines for visual and written work, and note that physical works must be delivered on Monday, September 21, 2026.",
-        "Questions about submissions may be directed to the Planet Deep South organizing team at theeadhlab@gmail.com."
+        "Questions about submissions may be directed to The 2026 Planet Deep South Pop Up organizing team at theeadhlab@gmail.com."
       ],
       review: [
         "Submissions will be reviewed for thematic fit, clarity, creative strength, and feasibility within the event format.",
-        "A smaller number of accepted works will be invited for presentation as part of Planet Deep South 2026, including possible presentation during the evening reception."
+        "A smaller number of accepted works will be invited for presentation as part of The 2026 Planet Deep South Pop Up, including possible presentation during the evening reception."
       ],
       contactItems: [
         "Email address",
@@ -370,7 +370,7 @@ const siteData = {
       pageHeader: {
         title: "About + Information",
         intro:
-          "Planet Deep South is a platform for Black speculative thought, creative practice, scholarship, and Southern worldbuilding. Here is the core background and visitor information for the 2026 convening."
+          "The 2026 Planet Deep South Pop Up is a platform for Black speculative thought, creative practice, scholarship, and Southern worldbuilding. Here is the core background and visitor information for the 2026 convening."
       },
       sections: [
         {
@@ -378,18 +378,18 @@ const siteData = {
           eyebrow: "Origins",
           title: "A Jackson State University Legacy",
           paragraphs: [
-            "Planet Deep South was developed through creative and intellectual collaboration at Jackson State University.",
+            "The 2026 Planet Deep South Pop Up was developed through creative and intellectual collaboration at Jackson State University.",
             "From its beginning, the project has brought together artists, scholars, writers, designers, technologists, and students to examine how Black communities imagine the future from the cultural, historical, and geographic realities of the Deep South.",
-            "Planet Deep South places HBCUs at the center of conversations about Afrofuturism, speculative art, technology, cultural memory, and future-making."
+            "The 2026 Planet Deep South Pop Up places HBCUs at the center of conversations about Afrofuturism, speculative art, technology, cultural memory, and future-making."
           ]
         },
         {
           id: "purpose",
           eyebrow: "Purpose",
-          title: "Why Planet Deep South Matters",
+          title: "Why The 2026 Planet Deep South Pop Up Matters",
           paragraphs: [
             "Too often, conversations about futurism and emerging technology overlook the histories, knowledge systems, and creative practices of Black Southern communities.",
-            "Planet Deep South creates a space for those communities to define the future on their own terms."
+            "The 2026 Planet Deep South Pop Up creates a space for those communities to define the future on their own terms."
           ],
           bullets: [
             "Recover history",
@@ -402,9 +402,9 @@ const siteData = {
         {
           id: "2026-program",
           eyebrow: "2026 Program",
-          title: "Planet Deep South 2026",
+          title: "The 2026 Planet Deep South Pop Up",
           paragraphs: [
-            "The 2026 convening brings Planet Deep South back to Jackson for a focused day of art, scholarship, exchange, and evening performance.",
+            "The 2026 Planet Deep South Pop Up returns to Jackson for a focused day of art, scholarship, exchange, and evening performance.",
             "The program includes opening remarks, a craft talk with John Jennings, exhibition viewing, a luncheon conversation, a scholarly roundtable, Tiger Futures, readings, performance, and a closing reception with music."
           ]
         },
@@ -413,7 +413,7 @@ const siteData = {
           eyebrow: "Collaboration",
           title: "Across the Arts and Humanities",
           paragraphs: [
-            "Planet Deep South is designed as an interdisciplinary program connecting artists, scholars, students, and educators across the visual and performing arts, humanities, design, digital media, and cultural studies."
+            "The 2026 Planet Deep South Pop Up is designed as an interdisciplinary program connecting artists, scholars, students, and educators across the visual and performing arts, humanities, design, digital media, and cultural studies."
           ],
           bullets: [
             "Art",
@@ -443,7 +443,7 @@ const siteData = {
           eyebrow: "Registration",
           title: "Register to Attend",
           paragraphs: [
-            "Planet Deep South is free and open to attendees.",
+            "The 2026 Planet Deep South Pop Up is free and open to attendees.",
             "Use the registration form below to sign up for the convening."
           ],
           registrationEmbed: true
@@ -454,7 +454,7 @@ const siteData = {
           title: "Arrival, Access, and Contact",
           paragraphs: [
             "Visitor parking instructions, recommended entrances, and event check-in information will be posted before the event. Guests should allow additional time for parking and arrival.",
-            "Guests who require accommodations should contact the Planet Deep South organizing team in advance.",
+            "Guests who require accommodations should contact The 2026 Planet Deep South Pop Up organizing team in advance.",
             "For questions about programming, participation, accessibility, partnerships, or media inquiries, email theeadhlab@gmail.com."
           ]
         },
@@ -463,7 +463,7 @@ const siteData = {
           eyebrow: "Evening Program",
           title: "Tiger Futures",
           paragraphs: [
-            "Tiger Futures opens the evening portion of Planet Deep South in the Johnson Hall Art Gallery with student-centered creative work, followed by readings, performance, and an informal reception with music.",
+            "Tiger Futures opens the evening portion of The 2026 Planet Deep South Pop Up in the Johnson Hall Art Gallery with student-centered creative work, followed by readings, performance, and an informal reception with music.",
             "Guests are welcome to arrive for the full day or join the evening program, and creative attire is welcome but not required."
           ]
         }

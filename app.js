@@ -108,7 +108,7 @@ function renderRegistrationEmbed() {
     <div class="registration-embed">
       <iframe
         id="JotFormIFrame-262326200071139"
-        title="Sign Up for Planet Deep South!"
+        title="Sign Up for The 2026 Planet Deep South Pop Up!"
         onload="window.parent.scrollTo(0,0)"
         allowtransparency="true"
         allow="geolocation; microphone; camera; fullscreen; payment"
@@ -153,7 +153,7 @@ function renderHome() {
           <h2>${shared.eventOverview.title}</h2>
         </div>
         <aside class="pull-quote">
-          <p>Planet Deep South gathers artists, scholars, students, and community audiences around Black speculative futures in the American South.</p>
+          <p>The 2026 Planet Deep South Pop Up gathers artists, scholars, students, and community audiences around Black speculative futures in the American South.</p>
         </aside>
       </div>
       <div class="editorial-columns editorial-columns-single">
@@ -213,7 +213,7 @@ function renderHome() {
     <section class="content-section">
       <article class="section-prose section-frame registration-feature">
         <p class="eyebrow">Registration</p>
-        <h2>Register for Planet Deep South 2026</h2>
+        <h2>Register for The 2026 Planet Deep South Pop Up</h2>
         <p class="lede-small">Reserve your place for a full day of talks, exhibition viewing, scholarly exchange, Tiger Futures, readings, and the evening reception.</p>
         ${renderRegistrationEmbed()}
       </article>
@@ -337,7 +337,7 @@ function renderBuildYourTigerWorld() {
       <div class="feature-grid">
         <article class="section-prose section-frame">
           <p class="eyebrow">Submission Opportunity</p>
-          <h2>Submit Work to Planet Deep South 2026</h2>
+          <h2>Submit Work to The 2026 Planet Deep South Pop Up</h2>
           ${paragraphBlock(page.prompt)}
           <div class="button-row">
             <a class="button button-primary" href="${page.submit.href}" target="_blank" rel="noreferrer">${page.submit.label}</a>
