@@ -174,16 +174,6 @@ const siteData = {
           location: "Lunch on your own"
         },
         {
-          time: "1:30-2:30 p.m.",
-          title: "Luncheon Conversation",
-          subheading: "By Invitation",
-          description: [
-            "An intimate facilitated conversation bringing invited participants together for deeper discussion around the themes of The 2026 Planet Deep South Pop Up."
-          ],
-          location: "Student Center",
-          meta: ["By invitation"]
-        },
-        {
           time: "3:00-3:50 p.m.",
           title: "Scholarly Roundtable",
           description: [
@@ -435,7 +425,7 @@ const siteData = {
           paragraphs: [
             "Wednesday, September 30, 2026",
             "College of Liberal Arts, Jackson State University, 1400 John R. Lynch Street, Jackson, Mississippi 39217",
-            "Talks, the craft talk, exhibition viewing, and the scholarly roundtable take place in College of Liberal Arts Room 166. The luncheon conversation takes place in the Student Center. The evening program and reception take place in the Johnson Hall Art Gallery."
+            "Talks, the craft talk, exhibition viewing, and the scholarly roundtable take place in College of Liberal Arts Room 166. The evening program and reception take place in the Johnson Hall Art Gallery."
           ]
         },
         {
