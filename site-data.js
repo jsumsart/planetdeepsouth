@@ -39,6 +39,12 @@ const siteData = {
         name: "Thee Africana Digital Humanities Lab",
         image: "assets/adh-lab-logo.png",
         alt: "Thee Africana Digital Humanities Lab logo."
+      },
+      {
+        name: "Delta Sigma Theta Sorority, Inc. Jackson (MS) Alumnae Chapter",
+        image: "assets/delta-sigma-theta-jackson-alumnae-logo.png",
+        alt: "Delta Sigma Theta Sorority, Inc. Jackson Mississippi Alumnae Chapter logo.",
+        lightBackground: true
       }
     ],
     footerLegal: "A public HBCU in Jackson, Mississippi."
